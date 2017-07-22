@@ -1,4 +1,64 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>Ruby on Rails Developers</title><description>Thoughts, stories and ideas.</description><link>http://localhost:2368/</link><generator>Ghost 0.11</generator><lastBuildDate>Sat, 22 Jul 2017 06:28:16 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>impressionist mysql errors</title><description>&lt;h3 id="mysql2errorblobtext"&gt;&lt;strong&gt;Mysql2::Error: BLOB/TEXT&lt;/strong&gt;&lt;/h3&gt;
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>Ruby on Rails Developers</title><description>Thoughts, stories and ideas.</description><link>http://localhost:2368/</link><generator>Ghost 0.11</generator><lastBuildDate>Sat, 22 Jul 2017 06:47:46 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>Ghost on Github Pages</title><description>&lt;h6 id=""&gt;參考&lt;/h6&gt;
+
+&lt;p&gt;Ghost官方網站 &lt;br&gt;
+&lt;a href="https://ghost.org/"&gt;https://ghost.org/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;部署到github pages教學 &lt;br&gt;
+&lt;a href="https://github.com/paladini/ghost-on-github-pages"&gt;https://github.com/paladini/ghost-on-github-pages&lt;/a&gt;  &lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h6 id="buster"&gt;buster&lt;/h6&gt;
+
+&lt;p&gt;用途打包文章成靜態檔案才能放到github pages上 &lt;br&gt;
+安裝指令 
+&lt;code&gt;pip install buster&lt;/code&gt;  &lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h6 id=""&gt;部署步驟&lt;/h6&gt;
+
+&lt;p&gt;&lt;code&gt;buster generate&lt;/code&gt; &lt;br&gt;
+&lt;code&gt;git add .&lt;/code&gt; &lt;br&gt;
+&lt;code&gt;git commit -am "add post"&lt;/code&gt; &lt;br&gt;
+&lt;code&gt;git push origin master&lt;/code&gt;&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h6 id="jquerynotworkingongithubpages"&gt;Jquery not working on github pages&lt;/h6&gt;
+
+&lt;p&gt;因為預設版型內的jquery cdn 不是 https, 所以在github pagaes 上不能讀取.
+所以找到ghost裡面 &lt;code&gt;content/theme/casper/&lt;/code&gt;&lt;/p&gt;</description><link>http://localhost:2368/ghost-on-github-pages/</link><guid isPermaLink="false">4e5f6b9b-985d-4c64-9681-6c0608701cd8</guid><dc:creator>Vincent</dc:creator><pubDate>Sat, 22 Jul 2017 06:47:03 GMT</pubDate><content:encoded>&lt;h6 id=""&gt;參考&lt;/h6&gt;
+
+&lt;p&gt;Ghost官方網站 &lt;br&gt;
+&lt;a href="https://ghost.org/"&gt;https://ghost.org/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;部署到github pages教學 &lt;br&gt;
+&lt;a href="https://github.com/paladini/ghost-on-github-pages"&gt;https://github.com/paladini/ghost-on-github-pages&lt;/a&gt;  &lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h6 id="buster"&gt;buster&lt;/h6&gt;
+
+&lt;p&gt;用途打包文章成靜態檔案才能放到github pages上 &lt;br&gt;
+安裝指令 
+&lt;code&gt;pip install buster&lt;/code&gt;  &lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h6 id=""&gt;部署步驟&lt;/h6&gt;
+
+&lt;p&gt;&lt;code&gt;buster generate&lt;/code&gt; &lt;br&gt;
+&lt;code&gt;git add .&lt;/code&gt; &lt;br&gt;
+&lt;code&gt;git commit -am "add post"&lt;/code&gt; &lt;br&gt;
+&lt;code&gt;git push origin master&lt;/code&gt;&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h6 id="jquerynotworkingongithubpages"&gt;Jquery not working on github pages&lt;/h6&gt;
+
+&lt;p&gt;因為預設版型內的jquery cdn 不是 https, 所以在github pagaes 上不能讀取.
+所以找到ghost裡面 &lt;code&gt;content/theme/casper/default.hbs&lt;/code&gt; 幫jquery路徑修改為https版本即可.&lt;/p&gt;</content:encoded></item><item><title>impressionist mysql errors</title><description>&lt;h3 id="mysql2errorblobtext"&gt;&lt;strong&gt;Mysql2::Error: BLOB/TEXT&lt;/strong&gt;&lt;/h3&gt;
 
 &lt;p&gt;in /db/migrate/create&lt;em&gt;impressions&lt;/em&gt;table.rb &lt;br&gt;
 找到&lt;/p&gt;
