@@ -1,4 +1,51 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>Ruby on Rails Developers</title><description>Thoughts, stories and ideas.</description><link>http://localhost:2368/</link><generator>Ghost 0.11</generator><lastBuildDate>Sat, 22 Jul 2017 06:47:46 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>Ghost on Github Pages</title><description>&lt;h6 id=""&gt;參考&lt;/h6&gt;
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>Ruby on Rails Developers</title><description>Ruby on Rails Developers</description><link>http://localhost:2368/</link><generator>Ghost 0.11</generator><lastBuildDate>Sat, 22 Jul 2017 09:59:37 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>Ruby on Rails method render_to_string</title><description>&lt;h6 id=""&gt;來源&lt;/h6&gt;
+
+&lt;p&gt;&lt;a href="https://apidock.com/rails/ActionController/Base/render_to_string"&gt;https://apidock.com/rails/ActionController/Base/render&lt;em&gt;to&lt;/em&gt;string&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h6 id=""&gt;用法&lt;/h6&gt;
+
+&lt;p&gt;基本上跟在view中render是一樣的, 只差別是在controller中使用 &lt;br&gt;
+* render partial &lt;br&gt;
+&lt;code&gt;render_to_string(partial: "/users/show", locals: {user: user})&lt;/code&gt; &lt;br&gt;
+* render template &lt;br&gt;
+&lt;code&gt;render_to_string(template: "/users/show", locals: {user: user})&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;如果要在其他地方使用(例如自定義的class或是model)則必須&lt;code&gt;ApplicationController.new.render_to_string()&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;另外如果render的view中有用到url&lt;em&gt;helper的東西,
+遇到 &lt;br&gt;
+&lt;code&gt;ActionView::Template::Error (undefined&lt;/code&gt;&lt;/em&gt;&lt;/p&gt;</description><link>http://localhost:2368/render_to_string/</link><guid isPermaLink="false">15efffba-fabf-421d-9902-814ae3b2dd65</guid><category>Ruby on Rails</category><dc:creator>Vincent</dc:creator><pubDate>Sat, 22 Jul 2017 09:03:03 GMT</pubDate><content:encoded>&lt;h6 id=""&gt;來源&lt;/h6&gt;
+
+&lt;p&gt;&lt;a href="https://apidock.com/rails/ActionController/Base/render_to_string"&gt;https://apidock.com/rails/ActionController/Base/render&lt;em&gt;to&lt;/em&gt;string&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h6 id=""&gt;用法&lt;/h6&gt;
+
+&lt;p&gt;基本上跟在view中render是一樣的, 只差別是在controller中使用 &lt;br&gt;
+* render partial &lt;br&gt;
+&lt;code&gt;render_to_string(partial: "/users/show", locals: {user: user})&lt;/code&gt; &lt;br&gt;
+* render template &lt;br&gt;
+&lt;code&gt;render_to_string(template: "/users/show", locals: {user: user})&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;如果要在其他地方使用(例如自定義的class或是model)則必須&lt;code&gt;ApplicationController.new.render_to_string()&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;另外如果render的view中有用到url&lt;em&gt;helper的東西,
+遇到 &lt;br&gt;
+&lt;code&gt;ActionView::Template::Error (undefined method 'host' for nil:NilClass)&lt;/code&gt;
+這個錯誤則在 &lt;br&gt;
+/config/initializers/application&lt;/em&gt;controller_renderer.rb
+加入 &lt;br&gt;
+&lt;code&gt;include Rails.application.routes.url_helpers&lt;/code&gt; &lt;br&gt;
+&lt;code&gt;include ApplicationHelper&lt;/code&gt;  &lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;def default_url_options
+   {host: Rails.application.routes.default_url_options[:host]}
+end&lt;/code&gt;  &lt;/p&gt;
+
+&lt;hr&gt;</content:encoded></item><item><title>Ghost on Github Pages</title><description>&lt;h6 id=""&gt;參考&lt;/h6&gt;
 
 &lt;p&gt;Ghost官方網站 &lt;br&gt;
 &lt;a href="https://ghost.org/"&gt;https://ghost.org/&lt;/a&gt;&lt;/p&gt;
