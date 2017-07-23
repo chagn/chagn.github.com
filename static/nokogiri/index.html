@@ -1,0 +1,211 @@
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Nokogiri</title>
+    <meta name="description" content="">
+
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="../favicon.ico">
+
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic%7COpen+Sans:700,400">
+    <link rel="stylesheet" type="text/css" href="../assets/css/screen.css?v=819251e986">
+
+
+    <link rel="canonical" href="index.html">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <link rel="amphtml" href="amp/index.html">
+    
+    <meta property="og:site_name" content="Ruby on Rails Developers">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Nokogiri">
+    <meta property="og:description" content="用途 解析Html結構, 可用於爬蟲 基本方法 讀取Html  doc = Nokogiri::HTML(file, nil, &quot;編碼&quot;)  file 可以是是網址  require 'open-uri' doc = Nokogiri::HTML(open( url ), nil, 'UTF-8' )  或是檔案路徑  doc = Nokogiri::HTML(File.open(&quot;index.html&quot;), nil, 'UTF-8' ) 或是直接的字串  doc = Nokogiri::HTML(&quot;&amp;lt;html&amp;gt;&amp;lt;h1&amp;gt;Hello World!!&amp;lt;/h1&amp;gt;&amp;lt;/html&amp;gt;">
+    <meta property="og:url" content="http://localhost:2368/nokogiri/">
+    <meta property="article:published_time" content="2017-07-23T05:11:29.000Z">
+    <meta property="article:modified_time" content="2017-07-23T05:11:29.000Z">
+    <meta property="article:tag" content="Ruby on Rails">
+    <meta property="article:tag" content="Nokogiri">
+    
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Nokogiri">
+    <meta name="twitter:description" content="用途 解析Html結構, 可用於爬蟲 基本方法 讀取Html  doc = Nokogiri::HTML(file, nil, &quot;編碼&quot;)  file 可以是是網址  require 'open-uri' doc = Nokogiri::HTML(open( url ), nil, 'UTF-8' )  或是檔案路徑  doc = Nokogiri::HTML(File.open(&quot;index.html&quot;), nil, 'UTF-8' ) 或是直接的字串  doc = Nokogiri::HTML(&quot;&amp;lt;html&amp;gt;&amp;lt;h1&amp;gt;Hello World!!&amp;lt;/h1&amp;gt;&amp;lt;/html&amp;gt;">
+    <meta name="twitter:url" content="http://localhost:2368/nokogiri/">
+    <meta name="twitter:label1" content="Written by">
+    <meta name="twitter:data1" content="Vincent">
+    <meta name="twitter:label2" content="Filed under">
+    <meta name="twitter:data2" content="Ruby on Rails, Nokogiri">
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Ruby on Rails Developers",
+        "logo": "http://localhost:2368/ghost/img/ghosticon.jpg"
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Vincent",
+        "url": "http://localhost:2368/author/yang/",
+        "sameAs": []
+    },
+    "headline": "Nokogiri",
+    "url": "http://localhost:2368/nokogiri/",
+    "datePublished": "2017-07-23T05:11:29.000Z",
+    "dateModified": "2017-07-23T05:11:29.000Z",
+    "keywords": "Ruby on Rails, Nokogiri",
+    "description": "用途 解析Html結構, 可用於爬蟲 基本方法 讀取Html  doc &#x3D; Nokogiri::HTML(file, nil, &quot;編碼&quot;)  file 可以是是網址  require &#x27;open-uri&#x27; doc &#x3D; Nokogiri::HTML(open( url ), nil, &#x27;UTF-8&#x27; )  或是檔案路徑  doc &#x3D; Nokogiri::HTML(File.open(&quot;index.html&quot;), nil, &#x27;UTF-8&#x27; ) 或是直接的字串  doc &#x3D; Nokogiri::HTML(&quot;&amp;lt;html&amp;gt;&amp;lt;h1&amp;gt;Hello World!!&amp;lt;/h1&amp;gt;&amp;lt;/html&amp;gt;",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "http://localhost:2368"
+    }
+}
+    </script>
+
+    <meta name="generator" content="Ghost 0.11">
+    <link rel="alternate" type="application/rss+xml" title="Ruby on Rails Developers" href="../rss/index.html">
+</head>
+<body class="post-template tag-ruby-on-rails tag-nokogiri nav-closed">
+
+    <div class="nav">
+    <h3 class="nav-title">Menu</h3>
+    <a href="index.html#" class="nav-close">
+        <span class="hidden">Close</span>
+    </a>
+    <ul>
+            <li class="nav-home"><a href="../">Home</a></li>
+            <li class="nav-ruby-on-rails"><a href="../tag/ruby-on-rails/">Ruby on Rails</a></li>
+    </ul>
+        <a class="subscribe-button icon-feed" href="../rss/index.rss">Subscribe</a>
+</div>
+<span class="nav-cover"></span>
+
+
+    <div class="site-wrapper">
+
+        
+
+
+<header class="main-header post-head no-cover">
+    <nav class="main-nav  clearfix">
+        
+            <a class="menu-button icon-menu" href="index.html#"><span class="word">Menu</span></a>
+    </nav>
+</header>
+
+<main class="content" role="main">
+    <article class="post tag-ruby-on-rails tag-nokogiri">
+
+        <header class="post-header">
+            <h1 class="post-title">Nokogiri</h1>
+            <section class="post-meta">
+                <time class="post-date" datetime="2017-07-23">23 July 2017</time>  on <a href="../tag/ruby-on-rails/">Ruby on Rails</a>, <a href="../tag/nokogiri/">Nokogiri</a>
+            </section>
+        </header>
+
+        <section class="post-content">
+            <h6 id="">用途</h6>
+
+<p>解析Html結構, 可用於爬蟲</p>
+
+<hr>
+
+<h6 id="">基本方法</h6>
+
+<ol>
+<li><p>讀取Html <br>
+<code>doc = Nokogiri::HTML(file, nil, "編碼")</code> <br>
+file 可以是是網址 <br>
+<code>require 'open-uri'
+doc = Nokogiri::HTML(open( url ), nil, 'UTF-8' )</code> <br>
+或是檔案路徑 <br>
+<code>doc = Nokogiri::HTML(File.open("index.html"), nil, 'UTF-8' )</code>
+或是直接的字串 <br>
+<code>doc = Nokogiri::HTML("&lt;html&gt;&lt;h1&gt;Hello World!!&lt;/h1&gt;&lt;/html&gt;", nil, 'UTF-8' )</code></p></li>
+<li><p>選擇器  </p>
+
+<ul><li>xpath <br>
+<code>doc.xpath("h1")</code>  </li>
+<li>css <br>
+<code>doc.css(".class_name")</code>   </li>
+<li>選擇全部 <br>
+<code>doc.css("//.class_name")</code></li></ul></li>
+<li>取值 <br>
+<ul><li><code>text</code> 該元素內的文字(會自動去除html)   </li>
+<li><code>to_html</code> 包含該元素的完整html  </li>
+<li><code>inner_html</code> 該元素內的完整html </li>
+<li><code>[attr]</code> 該元素之屬性</li></ul></li>
+</ol>
+
+<hr>
+
+<h6 id="">參考</h6>
+
+<p><a href="https://wwssllabcd.github.io/blog/2012/10/25/how-to-use-nokogiri/">https://wwssllabcd.github.io/blog/2012/10/25/how-to-use-nokogiri/</a>  </p>
+
+<hr>
+        </section>
+
+        <footer class="post-footer">
+
+
+
+            <section class="author">
+                <h4><a href="../author/yang/">Vincent</a></h4>
+
+                    <p>Read <a href="../author/yang/">more posts</a> by this author.</p>
+                <div class="author-meta">
+                    
+                    
+                </div>
+            </section>
+
+
+            <section class="share">
+                <h4>Share this post</h4>
+                <a class="icon-twitter" href="https://twitter.com/intent/tweet?text=Nokogiri&amp;url=http://localhost:2368/nokogiri/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <span class="hidden">Twitter</span>
+                </a>
+                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:2368/nokogiri/" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <span class="hidden">Facebook</span>
+                </a>
+                <a class="icon-google-plus" href="https://plus.google.com/share?url=http://localhost:2368/nokogiri/" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <span class="hidden">Google+</span>
+                </a>
+            </section>
+
+
+        </footer>
+
+    </article>
+</main>
+
+<aside class="read-next">
+    <a class="read-next-story prev no-cover" href="../render_to_string/">
+        <section class="post">
+            <h2>Ruby on Rails method render_to_string</h2>
+            <p>來源 https://apidock.com/rails/ActionController/Base/rendertostring 用法 基本上跟在view中render是一樣的, 只差別是在controller中使用  * render partial  render_to_string(partial: "/users/show"…</p>
+        </section>
+    </a>
+</aside>
+
+
+
+        <footer class="site-footer clearfix">
+            <section class="copyright"><a href="../">Ruby on Rails Developers</a> © 2017</section>
+            <section class="poweredby">Proudly published with <a href="https://ghost.org">Ghost</a></section>
+        </footer>
+
+    </div>
+
+    <!-- <script type="text/javascript" src="//code.jquery.com/jquery-1.12.0.min.js"></script> -->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    
+    <script type="text/javascript" src="../assets/js/jquery.fitvids.js?v=819251e986"></script>
+    <script type="text/javascript" src="../assets/js/index.js?v=819251e986"></script>
+
+</body>

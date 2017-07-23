@@ -1,4 +1,60 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>Ruby on Rails Developers</title><description>Ruby on Rails Developers</description><link>http://localhost:2368/</link><generator>Ghost 0.11</generator><lastBuildDate>Sat, 22 Jul 2017 15:06:24 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>Ruby on Rails method render_to_string</title><description>&lt;h6 id=""&gt;來源&lt;/h6&gt;
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>Ruby on Rails Developers</title><description>Ruby on Rails Developers</description><link>http://localhost:2368/</link><generator>Ghost 0.11</generator><lastBuildDate>Sun, 23 Jul 2017 05:18:55 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>Nokogiri</title><description>&lt;h6 id=""&gt;用途&lt;/h6&gt;
+
+&lt;p&gt;解析Html結構, 可用於爬蟲&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h6 id=""&gt;基本方法&lt;/h6&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;讀取Html &lt;br&gt;
+&lt;code&gt;doc = Nokogiri::HTML(file, nil, "編碼")&lt;/code&gt; &lt;br&gt;
+file 可以是是網址 &lt;br&gt;
+&lt;code&gt;require 'open-uri'
+doc = Nokogiri::HTML(open( url ), nil, 'UTF-8' )&lt;/code&gt; &lt;br&gt;
+或是檔案路徑 &lt;br&gt;
+&lt;code&gt;doc = Nokogiri::HTML(File.open("index.html"), nil, 'UTF-8' )&lt;/code&gt;
+或是直接的字串 &lt;br&gt;
+&lt;code&gt;doc = Nokogiri::HTML("&amp;lt;html&amp;gt;&amp;lt;h1&amp;gt;Hello World!!&amp;lt;/h1&amp;gt;&amp;lt;/html&amp;gt;&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;&lt;/ol&gt;</description><link>http://localhost:2368/nokogiri/</link><guid isPermaLink="false">e93ab4bb-27c1-4e19-b7b5-03f7348ba46f</guid><category>Ruby on Rails</category><category>Nokogiri</category><dc:creator>Vincent</dc:creator><pubDate>Sun, 23 Jul 2017 05:11:29 GMT</pubDate><content:encoded>&lt;h6 id=""&gt;用途&lt;/h6&gt;
+
+&lt;p&gt;解析Html結構, 可用於爬蟲&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h6 id=""&gt;基本方法&lt;/h6&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;讀取Html &lt;br&gt;
+&lt;code&gt;doc = Nokogiri::HTML(file, nil, "編碼")&lt;/code&gt; &lt;br&gt;
+file 可以是是網址 &lt;br&gt;
+&lt;code&gt;require 'open-uri'
+doc = Nokogiri::HTML(open( url ), nil, 'UTF-8' )&lt;/code&gt; &lt;br&gt;
+或是檔案路徑 &lt;br&gt;
+&lt;code&gt;doc = Nokogiri::HTML(File.open("index.html"), nil, 'UTF-8' )&lt;/code&gt;
+或是直接的字串 &lt;br&gt;
+&lt;code&gt;doc = Nokogiri::HTML("&amp;lt;html&amp;gt;&amp;lt;h1&amp;gt;Hello World!!&amp;lt;/h1&amp;gt;&amp;lt;/html&amp;gt;", nil, 'UTF-8' )&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;選擇器  &lt;/p&gt;
+
+&lt;ul&gt;&lt;li&gt;xpath &lt;br&gt;
+&lt;code&gt;doc.xpath("h1")&lt;/code&gt;  &lt;/li&gt;
+&lt;li&gt;css &lt;br&gt;
+&lt;code&gt;doc.css(".class_name")&lt;/code&gt;   &lt;/li&gt;
+&lt;li&gt;選擇全部 &lt;br&gt;
+&lt;code&gt;doc.css("//.class_name")&lt;/code&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;取值 &lt;br&gt;
+&lt;ul&gt;&lt;li&gt;&lt;code&gt;text&lt;/code&gt; 該元素內的文字(會自動去除html)   &lt;/li&gt;
+&lt;li&gt;&lt;code&gt;to_html&lt;/code&gt; 包含該元素的完整html  &lt;/li&gt;
+&lt;li&gt;&lt;code&gt;inner_html&lt;/code&gt; 該元素內的完整html &lt;/li&gt;
+&lt;li&gt;&lt;code&gt;[attr]&lt;/code&gt; 該元素之屬性&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;hr&gt;
+
+&lt;h6 id=""&gt;參考&lt;/h6&gt;
+
+&lt;p&gt;&lt;a href="https://wwssllabcd.github.io/blog/2012/10/25/how-to-use-nokogiri/"&gt;https://wwssllabcd.github.io/blog/2012/10/25/how-to-use-nokogiri/&lt;/a&gt;  &lt;/p&gt;
+
+&lt;hr&gt;</content:encoded></item><item><title>Ruby on Rails method render_to_string</title><description>&lt;h6 id=""&gt;來源&lt;/h6&gt;
 
 &lt;p&gt;&lt;a href="https://apidock.com/rails/ActionController/Base/render_to_string"&gt;https://apidock.com/rails/ActionController/Base/render&lt;em&gt;to&lt;/em&gt;string&lt;/a&gt;&lt;/p&gt;
 
