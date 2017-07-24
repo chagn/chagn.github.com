@@ -1,4 +1,32 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>Ruby on Rails Developers</title><description>Ruby on Rails Developers</description><link>http://localhost:2368/</link><generator>Ghost 0.11</generator><lastBuildDate>Sun, 23 Jul 2017 05:18:55 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>Nokogiri</title><description>&lt;h6 id=""&gt;用途&lt;/h6&gt;
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>Ruby on Rails Developers</title><description>Ruby on Rails Developers</description><link>http://localhost:2368/</link><generator>Ghost 0.11</generator><lastBuildDate>Mon, 24 Jul 2017 14:47:32 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>Nginx gzip</title><description>&lt;h6 id=""&gt;目的&lt;/h6&gt;
+
+&lt;p&gt;啟用gzip, 壓縮javascript&amp;amp;css, 增進網頁效能.&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;add in &lt;code&gt;/opt/nginx/conf/nginx.conf&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;gzip  on;
+gzip_static on;
+gzip_min_length 1k;
+gzip_buffers 4 16k;
+gzip_comp_level 5;
+gzip_types text/plain application/x-javascript text/css application/xml text/javascript;
+&lt;/code&gt;&lt;/pre&gt;</description><link>http://localhost:2368/nginx-gzip/</link><guid isPermaLink="false">2f3414ba-b0fb-4794-bf37-b2b593e60450</guid><category>nginx</category><dc:creator>Vincent</dc:creator><pubDate>Mon, 24 Jul 2017 14:42:16 GMT</pubDate><content:encoded>&lt;h6 id=""&gt;目的&lt;/h6&gt;
+
+&lt;p&gt;啟用gzip, 壓縮javascript&amp;amp;css, 增進網頁效能.&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;add in &lt;code&gt;/opt/nginx/conf/nginx.conf&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;gzip  on;
+gzip_static on;
+gzip_min_length 1k;
+gzip_buffers 4 16k;
+gzip_comp_level 5;
+gzip_types text/plain application/x-javascript text/css application/xml text/javascript;
+&lt;/code&gt;&lt;/pre&gt;</content:encoded></item><item><title>Nokogiri</title><description>&lt;h6 id=""&gt;用途&lt;/h6&gt;
 
 &lt;p&gt;解析Html結構, 可用於爬蟲&lt;/p&gt;
 
@@ -7,15 +35,23 @@
 &lt;h6 id=""&gt;基本方法&lt;/h6&gt;
 
 &lt;ol&gt;
-&lt;li&gt;&lt;p&gt;讀取Html &lt;br&gt;
+&lt;li&gt;讀取Html &lt;br&gt;
 &lt;code&gt;doc = Nokogiri::HTML(file, nil, "編碼")&lt;/code&gt; &lt;br&gt;
-file 可以是是網址 &lt;br&gt;
-&lt;code&gt;require 'open-uri'
-doc = Nokogiri::HTML(open( url ), nil, 'UTF-8' )&lt;/code&gt; &lt;br&gt;
-或是檔案路徑 &lt;br&gt;
-&lt;code&gt;doc = Nokogiri::HTML(File.open("index.html"), nil, 'UTF-8' )&lt;/code&gt;
-或是直接的字串 &lt;br&gt;
-&lt;code&gt;doc = Nokogiri::HTML("&amp;lt;html&amp;gt;&amp;lt;h1&amp;gt;Hello World!!&amp;lt;/h1&amp;gt;&amp;lt;/html&amp;gt;&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;&lt;/ol&gt;</description><link>http://localhost:2368/nokogiri/</link><guid isPermaLink="false">e93ab4bb-27c1-4e19-b7b5-03f7348ba46f</guid><category>Ruby on Rails</category><category>Nokogiri</category><dc:creator>Vincent</dc:creator><pubDate>Sun, 23 Jul 2017 05:11:29 GMT</pubDate><content:encoded>&lt;h6 id=""&gt;用途&lt;/h6&gt;
+file 可以是是網址  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;pre&gt;&lt;code&gt;require 'open-uri'  
+doc = Nokogiri::HTML(open( url ), nil, 'UTF-8' )  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;或是檔案路徑  &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;doc = Nokogiri::HTML(File.open("index.html"), nil, 'UTF-8' )  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;或是直接的字串  &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;doc = Nokogiri::HTML("&amp;lt;html&amp;gt;&amp;lt;h1&amp;gt;Hello World!!&amp;lt;/h1&amp;gt;&amp;lt;/html&amp;gt;&lt;/code&gt;&lt;/pre&gt;</description><link>http://localhost:2368/nokogiri/</link><guid isPermaLink="false">e93ab4bb-27c1-4e19-b7b5-03f7348ba46f</guid><category>Ruby on Rails</category><category>Nokogiri</category><dc:creator>Vincent</dc:creator><pubDate>Sun, 23 Jul 2017 05:11:29 GMT</pubDate><content:encoded>&lt;h6 id=""&gt;用途&lt;/h6&gt;
 
 &lt;p&gt;解析Html結構, 可用於爬蟲&lt;/p&gt;
 
@@ -24,17 +60,27 @@ doc = Nokogiri::HTML(open( url ), nil, 'UTF-8' )&lt;/code&gt; &lt;br&gt;
 &lt;h6 id=""&gt;基本方法&lt;/h6&gt;
 
 &lt;ol&gt;
-&lt;li&gt;&lt;p&gt;讀取Html &lt;br&gt;
+&lt;li&gt;讀取Html &lt;br&gt;
 &lt;code&gt;doc = Nokogiri::HTML(file, nil, "編碼")&lt;/code&gt; &lt;br&gt;
-file 可以是是網址 &lt;br&gt;
-&lt;code&gt;require 'open-uri'
-doc = Nokogiri::HTML(open( url ), nil, 'UTF-8' )&lt;/code&gt; &lt;br&gt;
-或是檔案路徑 &lt;br&gt;
-&lt;code&gt;doc = Nokogiri::HTML(File.open("index.html"), nil, 'UTF-8' )&lt;/code&gt;
-或是直接的字串 &lt;br&gt;
-&lt;code&gt;doc = Nokogiri::HTML("&amp;lt;html&amp;gt;&amp;lt;h1&amp;gt;Hello World!!&amp;lt;/h1&amp;gt;&amp;lt;/html&amp;gt;", nil, 'UTF-8' )&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;選擇器  &lt;/p&gt;
+file 可以是是網址  &lt;/li&gt;
+&lt;/ol&gt;
 
+&lt;pre&gt;&lt;code&gt;require 'open-uri'  
+doc = Nokogiri::HTML(open( url ), nil, 'UTF-8' )  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;或是檔案路徑  &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;doc = Nokogiri::HTML(File.open("index.html"), nil, 'UTF-8' )  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;或是直接的字串  &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;doc = Nokogiri::HTML("&amp;lt;html&amp;gt;&amp;lt;h1&amp;gt;Hello World!!&amp;lt;/h1&amp;gt;&amp;lt;/html&amp;gt;", nil, 'UTF-8' )  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ol&gt;
+&lt;li&gt;選擇器 &lt;br&gt;
 &lt;ul&gt;&lt;li&gt;xpath &lt;br&gt;
 &lt;code&gt;doc.xpath("h1")&lt;/code&gt;  &lt;/li&gt;
 &lt;li&gt;css &lt;br&gt;
@@ -62,17 +108,23 @@ doc = Nokogiri::HTML(open( url ), nil, 'UTF-8' )&lt;/code&gt; &lt;br&gt;
 
 &lt;h6 id=""&gt;用法&lt;/h6&gt;
 
-&lt;p&gt;基本上跟在view中render是一樣的, 只差別是在controller中使用 &lt;br&gt;
-* render partial &lt;br&gt;
-&lt;code&gt;render_to_string(partial: "/users/show", locals: {user: user})&lt;/code&gt; &lt;br&gt;
-* render template &lt;br&gt;
-&lt;code&gt;render_to_string(template: "/users/show", locals: {user: user})&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;基本上跟在view中render是一樣的, 只差別是在controller中使用  &lt;/p&gt;
 
-&lt;p&gt;如果要在其他地方使用(例如自定義的class或是model)則必須&lt;code&gt;ApplicationController.new.render_to_string()&lt;/code&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;#render partial  
+render_to_string(partial: "/users/show", locals: {user: user})  
+#render template  
+render_to_string(template: "/users/show", locals: {user: user})  
+&lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;另外如果render的view中有用到url&lt;em&gt;helper的東西,
-遇到 &lt;br&gt;
-&lt;code&gt;ActionView::Template::Error (undefined&lt;/code&gt;&lt;/em&gt;&lt;/p&gt;</description><link>http://localhost:2368/render_to_string/</link><guid isPermaLink="false">15efffba-fabf-421d-9902-814ae3b2dd65</guid><category>Ruby on Rails</category><dc:creator>Vincent</dc:creator><pubDate>Sat, 22 Jul 2017 09:03:03 GMT</pubDate><content:encoded>&lt;h6 id=""&gt;來源&lt;/h6&gt;
+&lt;p&gt;如果要在其他地方使用(例如自定義的class或是model)則必須&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;ApplicationController.new.render_to_string()  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;另外如果render的view中有用到url_helper的東西,
+遇到  &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;ActionView::Template::Error (undefined&lt;/code&gt;&lt;/pre&gt;</description><link>http://localhost:2368/render_to_string/</link><guid isPermaLink="false">15efffba-fabf-421d-9902-814ae3b2dd65</guid><category>Ruby on Rails</category><dc:creator>Vincent</dc:creator><pubDate>Sat, 22 Jul 2017 09:03:03 GMT</pubDate><content:encoded>&lt;h6 id=""&gt;來源&lt;/h6&gt;
 
 &lt;p&gt;&lt;a href="https://apidock.com/rails/ActionController/Base/render_to_string"&gt;https://apidock.com/rails/ActionController/Base/render&lt;em&gt;to&lt;/em&gt;string&lt;/a&gt;&lt;/p&gt;
 
@@ -80,26 +132,36 @@ doc = Nokogiri::HTML(open( url ), nil, 'UTF-8' )&lt;/code&gt; &lt;br&gt;
 
 &lt;h6 id=""&gt;用法&lt;/h6&gt;
 
-&lt;p&gt;基本上跟在view中render是一樣的, 只差別是在controller中使用 &lt;br&gt;
-* render partial &lt;br&gt;
-&lt;code&gt;render_to_string(partial: "/users/show", locals: {user: user})&lt;/code&gt; &lt;br&gt;
-* render template &lt;br&gt;
-&lt;code&gt;render_to_string(template: "/users/show", locals: {user: user})&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;基本上跟在view中render是一樣的, 只差別是在controller中使用  &lt;/p&gt;
 
-&lt;p&gt;如果要在其他地方使用(例如自定義的class或是model)則必須&lt;code&gt;ApplicationController.new.render_to_string()&lt;/code&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;#render partial  
+render_to_string(partial: "/users/show", locals: {user: user})  
+#render template  
+render_to_string(template: "/users/show", locals: {user: user})  
+&lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;另外如果render的view中有用到url&lt;em&gt;helper的東西,
-遇到 &lt;br&gt;
-&lt;code&gt;ActionView::Template::Error (undefined method 'host' for nil:NilClass)&lt;/code&gt;
-這個錯誤則在 &lt;br&gt;
-/config/initializers/application&lt;/em&gt;controller_renderer.rb
-加入 &lt;br&gt;
-&lt;code&gt;include Rails.application.routes.url_helpers&lt;/code&gt; &lt;br&gt;
-&lt;code&gt;include ApplicationHelper&lt;/code&gt;  &lt;/p&gt;
+&lt;p&gt;如果要在其他地方使用(例如自定義的class或是model)則必須&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;def default_url_options
+&lt;pre&gt;&lt;code&gt;ApplicationController.new.render_to_string()  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;另外如果render的view中有用到url_helper的東西,
+遇到  &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;ActionView::Template::Error (undefined method 'host' for nil:NilClass)  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;這個錯誤則在 &lt;br&gt;
+/config/initializers/application&lt;em&gt;controller&lt;/em&gt;renderer.rb
+加入  &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;include Rails.application.routes.url_helpers  
+include ApplicationHelper  
+
+def default_url_options  
    {host: Rails.application.routes.default_url_options[:host]}
-end&lt;/code&gt;  &lt;/p&gt;
+end  
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;hr&gt;</content:encoded></item><item><title>Ghost on Github Pages</title><description>&lt;h6 id=""&gt;參考&lt;/h6&gt;
 
@@ -114,17 +176,20 @@ end&lt;/code&gt;  &lt;/p&gt;
 &lt;h6 id="buster"&gt;buster&lt;/h6&gt;
 
 &lt;p&gt;用途打包文章成靜態檔案才能放到github pages上 &lt;br&gt;
-安裝指令 
-&lt;code&gt;pip install buster&lt;/code&gt;  &lt;/p&gt;
+安裝指令 &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;pip install buster  
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;hr&gt;
 
 &lt;h6 id=""&gt;部署步驟&lt;/h6&gt;
 
-&lt;p&gt;&lt;code&gt;buster generate&lt;/code&gt; &lt;br&gt;
-&lt;code&gt;git add .&lt;/code&gt; &lt;br&gt;
-&lt;code&gt;git commit -am "add post"&lt;/code&gt; &lt;br&gt;
-&lt;code&gt;git push origin master&lt;/code&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;buster generate  
+git add .  
+git commit -am "add post"  
+git push origin master  
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;hr&gt;
 
@@ -144,17 +209,20 @@ end&lt;/code&gt;  &lt;/p&gt;
 &lt;h6 id="buster"&gt;buster&lt;/h6&gt;
 
 &lt;p&gt;用途打包文章成靜態檔案才能放到github pages上 &lt;br&gt;
-安裝指令 
-&lt;code&gt;pip install buster&lt;/code&gt;  &lt;/p&gt;
+安裝指令 &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;pip install buster  
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;hr&gt;
 
 &lt;h6 id=""&gt;部署步驟&lt;/h6&gt;
 
-&lt;p&gt;&lt;code&gt;buster generate&lt;/code&gt; &lt;br&gt;
-&lt;code&gt;git add .&lt;/code&gt; &lt;br&gt;
-&lt;code&gt;git commit -am "add post"&lt;/code&gt; &lt;br&gt;
-&lt;code&gt;git push origin master&lt;/code&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;buster generate  
+git add .  
+git commit -am "add post"  
+git push origin master  
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;hr&gt;
 
@@ -166,17 +234,20 @@ end&lt;/code&gt;  &lt;/p&gt;
 &lt;p&gt;in /db/migrate/create&lt;em&gt;impressions&lt;/em&gt;table.rb &lt;br&gt;
 找到&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;add_index :impressions, [:impressionable_type, :impressionable_id, :params], :name =&amp;gt; "poly_params_request_index", :unique =&amp;gt; false&lt;/code&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;add_index :impressions, [:impressionable_type, :impressionable_id, :params], :name =&amp;gt; "poly_params_request_index", :unique =&amp;gt; false  
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;加入 :length =&gt; {:params =&gt; 255 } &lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;add_index :impressions, [:impressionable_type, :impressionable_id, :params], :name =&amp;gt; "poly_params_request_index", :unique =&amp;gt; false,&lt;/code&gt;&lt;/p&gt;</description><link>http://localhost:2368/impressionist-mysql-errors/</link><guid isPermaLink="false">b7ed55b7-7ef0-4c5e-90f6-82c599a8b43e</guid><category>Ruby on Rails</category><dc:creator>Vincent</dc:creator><pubDate>Fri, 21 Jul 2017 07:30:24 GMT</pubDate><content:encoded>&lt;h3 id="mysql2errorblobtext"&gt;&lt;strong&gt;Mysql2::Error: BLOB/TEXT&lt;/strong&gt;&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;add_index :impressions, [:impressionable_type, :impressionable_id, :params], :name =&amp;gt; "poly_params_request_index", :unique =&amp;gt; false,&lt;/code&gt;&lt;/pre&gt;</description><link>http://localhost:2368/impressionist-mysql-errors/</link><guid isPermaLink="false">b7ed55b7-7ef0-4c5e-90f6-82c599a8b43e</guid><category>Ruby on Rails</category><dc:creator>Vincent</dc:creator><pubDate>Fri, 21 Jul 2017 07:30:24 GMT</pubDate><content:encoded>&lt;h3 id="mysql2errorblobtext"&gt;&lt;strong&gt;Mysql2::Error: BLOB/TEXT&lt;/strong&gt;&lt;/h3&gt;
 
 &lt;p&gt;in /db/migrate/create&lt;em&gt;impressions&lt;/em&gt;table.rb &lt;br&gt;
 找到&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;add_index :impressions, [:impressionable_type, :impressionable_id, :params], :name =&amp;gt; "poly_params_request_index", :unique =&amp;gt; false&lt;/code&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;add_index :impressions, [:impressionable_type, :impressionable_id, :params], :name =&amp;gt; "poly_params_request_index", :unique =&amp;gt; false  
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;加入 :length =&gt; {:params =&gt; 255 } &lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;add_index :impressions, [:impressionable_type, :impressionable_id, :params], :name =&amp;gt; "poly_params_request_index", :unique =&amp;gt; false, :length =&amp;gt; {:params =&amp;gt; 255 }&lt;/code&gt;&lt;/p&gt;</content:encoded></item></channel></rss>
+&lt;pre&gt;&lt;code&gt;add_index :impressions, [:impressionable_type, :impressionable_id, :params], :name =&amp;gt; "poly_params_request_index", :unique =&amp;gt; false, :length =&amp;gt; {:params =&amp;gt; 255 }  
+&lt;/code&gt;&lt;/pre&gt;</content:encoded></item></channel></rss>

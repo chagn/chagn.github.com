@@ -2,7 +2,7 @@
 <head>
     <meta charset="utf-8">
 
-    <title>Nokogiri</title>
+    <title>Nginx gzip</title>
     <meta name="description" content="">
 
     <meta name="HandheldFriendly" content="True">
@@ -15,22 +15,21 @@
     
     <meta property="og:site_name" content="Ruby on Rails Developers">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="Nokogiri">
-    <meta property="og:description" content="用途 解析Html結構, 可用於爬蟲 基本方法 讀取Html  doc = Nokogiri::HTML(file, nil, &quot;編碼&quot;)  file 可以是是網址   require 'open-uri'   doc = Nokogiri::HTML(open( url ), nil, 'UTF-8' )   或是檔案路徑   doc = Nokogiri::HTML(File.open(&quot;index.html&quot;), nil, 'UTF-8' )   或是直接的字串   doc = Nokogiri::HTML(&quot;&amp;lt;html&amp;gt;&amp;lt;h1&amp;gt;Hello World!!&amp;lt;/h1&amp;gt;&amp;lt;/html&amp;gt;">
-    <meta property="og:url" content="http://localhost:2368/nokogiri/">
-    <meta property="article:published_time" content="2017-07-23T05:11:29.000Z">
-    <meta property="article:modified_time" content="2017-07-24T14:44:03.000Z">
-    <meta property="article:tag" content="Ruby on Rails">
-    <meta property="article:tag" content="Nokogiri">
+    <meta property="og:title" content="Nginx gzip">
+    <meta property="og:description" content="目的 啟用gzip, 壓縮javascript&amp;amp;css, 增進網頁效能. add in /opt/nginx/conf/nginx.conf gzip  on; gzip_static on; gzip_min_length 1k; gzip_buffers 4 16k; gzip_comp_level 5; gzip_types text/plain application/x-javascript text/css application/xml text/javascript;">
+    <meta property="og:url" content="http://localhost:2368/nginx-gzip/">
+    <meta property="article:published_time" content="2017-07-24T14:42:16.000Z">
+    <meta property="article:modified_time" content="2017-07-24T14:42:33.000Z">
+    <meta property="article:tag" content="nginx">
     
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Nokogiri">
-    <meta name="twitter:description" content="用途 解析Html結構, 可用於爬蟲 基本方法 讀取Html  doc = Nokogiri::HTML(file, nil, &quot;編碼&quot;)  file 可以是是網址   require 'open-uri'   doc = Nokogiri::HTML(open( url ), nil, 'UTF-8' )   或是檔案路徑   doc = Nokogiri::HTML(File.open(&quot;index.html&quot;), nil, 'UTF-8' )   或是直接的字串   doc = Nokogiri::HTML(&quot;&amp;lt;html&amp;gt;&amp;lt;h1&amp;gt;Hello World!!&amp;lt;/h1&amp;gt;&amp;lt;/html&amp;gt;">
-    <meta name="twitter:url" content="http://localhost:2368/nokogiri/">
+    <meta name="twitter:title" content="Nginx gzip">
+    <meta name="twitter:description" content="目的 啟用gzip, 壓縮javascript&amp;amp;css, 增進網頁效能. add in /opt/nginx/conf/nginx.conf gzip  on; gzip_static on; gzip_min_length 1k; gzip_buffers 4 16k; gzip_comp_level 5; gzip_types text/plain application/x-javascript text/css application/xml text/javascript;">
+    <meta name="twitter:url" content="http://localhost:2368/nginx-gzip/">
     <meta name="twitter:label1" content="Written by">
     <meta name="twitter:data1" content="Vincent">
     <meta name="twitter:label2" content="Filed under">
-    <meta name="twitter:data2" content="Ruby on Rails, Nokogiri">
+    <meta name="twitter:data2" content="nginx">
     
     <script type="application/ld+json">
 {
@@ -47,12 +46,12 @@
         "url": "http://localhost:2368/author/yang/",
         "sameAs": []
     },
-    "headline": "Nokogiri",
-    "url": "http://localhost:2368/nokogiri/",
-    "datePublished": "2017-07-23T05:11:29.000Z",
-    "dateModified": "2017-07-24T14:44:03.000Z",
-    "keywords": "Ruby on Rails, Nokogiri",
-    "description": "用途 解析Html結構, 可用於爬蟲 基本方法 讀取Html  doc &#x3D; Nokogiri::HTML(file, nil, &quot;編碼&quot;)  file 可以是是網址   require &#x27;open-uri&#x27;   doc &#x3D; Nokogiri::HTML(open( url ), nil, &#x27;UTF-8&#x27; )   或是檔案路徑   doc &#x3D; Nokogiri::HTML(File.open(&quot;index.html&quot;), nil, &#x27;UTF-8&#x27; )   或是直接的字串   doc &#x3D; Nokogiri::HTML(&quot;&amp;lt;html&amp;gt;&amp;lt;h1&amp;gt;Hello World!!&amp;lt;/h1&amp;gt;&amp;lt;/html&amp;gt;",
+    "headline": "Nginx gzip",
+    "url": "http://localhost:2368/nginx-gzip/",
+    "datePublished": "2017-07-24T14:42:16.000Z",
+    "dateModified": "2017-07-24T14:42:33.000Z",
+    "keywords": "nginx",
+    "description": "目的 啟用gzip, 壓縮javascript&amp;amp;css, 增進網頁效能. add in /opt/nginx/conf/nginx.conf gzip  on; gzip_static on; gzip_min_length 1k; gzip_buffers 4 16k; gzip_comp_level 5; gzip_types text/plain application/x-javascript text/css application/xml text/javascript;",
     "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": "http://localhost:2368"
@@ -845,64 +844,29 @@
         <article class="post">
 
             <header class="post-header">
-                <h1 class="post-title">Nokogiri</h1>
+                <h1 class="post-title">Nginx gzip</h1>
                 <section class="post-meta">
                     <p class="author">by <a href="../../author/yang/">Vincent</a></p>
-                    <time class="post-date" datetime="2017-07-23">2017-07-23</time>
+                    <time class="post-date" datetime="2017-07-24">2017-07-24</time>
                 </section>
             </header>
             <section class="post-content">
 
-                <h6 id>用途</h6>
+                <h6 id>目的</h6>
 
-<p>解析Html結構, 可用於爬蟲</p>
-
-<hr>
-
-<h6 id>基本方法</h6>
-
-<ol>
-<li>讀取Html <br>
-<code>doc = Nokogiri::HTML(file, nil, "編碼")</code> <br>
-file 可以是是網址  </li>
-</ol>
-
-<pre><code>require 'open-uri'  
-doc = Nokogiri::HTML(open( url ), nil, 'UTF-8' )  
-</code></pre>
-
-<p>或是檔案路徑  </p>
-
-<pre><code>doc = Nokogiri::HTML(File.open("index.html"), nil, 'UTF-8' )  
-</code></pre>
-
-<p>或是直接的字串  </p>
-
-<pre><code>doc = Nokogiri::HTML("&lt;html&gt;&lt;h1&gt;Hello World!!&lt;/h1&gt;&lt;/html&gt;", nil, 'UTF-8' )  
-</code></pre>
-
-<ol>
-<li>選擇器 <br>
-<ul><li>xpath <br>
-<code>doc.xpath("h1")</code>  </li>
-<li>css <br>
-<code>doc.css(".class_name")</code>   </li>
-<li>選擇全部 <br>
-<code>doc.css("//.class_name")</code></li></ul></li>
-<li>取值 <br>
-<ul><li><code>text</code> 該元素內的文字(會自動去除html)   </li>
-<li><code>to_html</code> 包含該元素的完整html  </li>
-<li><code>inner_html</code> 該元素內的完整html </li>
-<li><code>[attr]</code> 該元素之屬性</li></ul></li>
-</ol>
+<p>啟用gzip, 壓縮javascript&amp;css, 增進網頁效能.</p>
 
 <hr>
 
-<h6 id>參考</h6>
+<p>add in <code>/opt/nginx/conf/nginx.conf</code></p>
 
-<p><a href="https://wwssllabcd.github.io/blog/2012/10/25/how-to-use-nokogiri/">https://wwssllabcd.github.io/blog/2012/10/25/how-to-use-nokogiri/</a>  </p>
-
-<hr>
+<pre><code>gzip  on;
+gzip_static on;
+gzip_min_length 1k;
+gzip_buffers 4 16k;
+gzip_comp_level 5;
+gzip_types text/plain application/x-javascript text/css application/xml text/javascript;
+</code></pre>
 
             </section>
 

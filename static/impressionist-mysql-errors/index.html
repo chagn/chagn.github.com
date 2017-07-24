@@ -22,15 +22,15 @@
     <meta property="og:site_name" content="Ruby on Rails Developers">
     <meta property="og:type" content="article">
     <meta property="og:title" content="impressionist mysql errors">
-    <meta property="og:description" content='Mysql2::Error: BLOB/TEXT in /db/migrate/createimpressionstable.rb  找到 add_index :impressions, [:impressionable_type, :impressionable_id, :params], :name =&amp;gt; "poly_params_request_index", :unique =&amp;gt; false 加入 :length =&gt; {:params =&gt; 255 }  add_index :impressions, [:impressionable_type, :impressionable_id, :params], :name =&amp;gt; "poly_params_request_index", :unique =&amp;gt; false, :length =&amp;gt;'>
+    <meta property="og:description" content='Mysql2::Error: BLOB/TEXT in /db/migrate/createimpressionstable.rb  找到 add_index :impressions, [:impressionable_type, :impressionable_id, :params], :name =&amp;gt; "poly_params_request_index", :unique =&amp;gt; false   加入 :length =&gt; {:params =&gt; 255 }  add_index :impressions, [:impressionable_type, :impressionable_id, :params], :name =&amp;gt; "poly_params_request_index", :unique =&amp;gt; false, :length =&amp;gt;'>
     <meta property="og:url" content="http://localhost:2368/impressionist-mysql-errors/">
     <meta property="article:published_time" content="2017-07-21T07:30:24.000Z">
-    <meta property="article:modified_time" content="2017-07-21T07:35:40.000Z">
+    <meta property="article:modified_time" content="2017-07-24T14:46:06.000Z">
     <meta property="article:tag" content="Ruby on Rails">
     
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="impressionist mysql errors">
-    <meta name="twitter:description" content='Mysql2::Error: BLOB/TEXT in /db/migrate/createimpressionstable.rb  找到 add_index :impressions, [:impressionable_type, :impressionable_id, :params], :name =&amp;gt; "poly_params_request_index", :unique =&amp;gt; false 加入 :length =&gt; {:params =&gt; 255 }  add_index :impressions, [:impressionable_type, :impressionable_id, :params], :name =&amp;gt; "poly_params_request_index", :unique =&amp;gt; false, :length =&amp;gt;'>
+    <meta name="twitter:description" content='Mysql2::Error: BLOB/TEXT in /db/migrate/createimpressionstable.rb  找到 add_index :impressions, [:impressionable_type, :impressionable_id, :params], :name =&amp;gt; "poly_params_request_index", :unique =&amp;gt; false   加入 :length =&gt; {:params =&gt; 255 }  add_index :impressions, [:impressionable_type, :impressionable_id, :params], :name =&amp;gt; "poly_params_request_index", :unique =&amp;gt; false, :length =&amp;gt;'>
     <meta name="twitter:url" content="http://localhost:2368/impressionist-mysql-errors/">
     <meta name="twitter:label1" content="Written by">
     <meta name="twitter:data1" content="Vincent">
@@ -55,9 +55,9 @@
     "headline": "impressionist mysql errors",
     "url": "http://localhost:2368/impressionist-mysql-errors/",
     "datePublished": "2017-07-21T07:30:24.000Z",
-    "dateModified": "2017-07-21T07:35:40.000Z",
+    "dateModified": "2017-07-24T14:46:06.000Z",
     "keywords": "Ruby on Rails",
-    "description": "Mysql2::Error: BLOB/TEXT in /db/migrate/createimpressionstable.rb  找到 add_index :impressions, [:impressionable_type, :impressionable_id, :params], :name &#x3D;&amp;gt; &quot;poly_params_request_index&quot;, :unique &#x3D;&amp;gt; false 加入 :length &#x3D;&gt; {:params &#x3D;&gt; 255 }  add_index :impressions, [:impressionable_type, :impressionable_id, :params], :name &#x3D;&amp;gt; &quot;poly_params_request_index&quot;, :unique &#x3D;&amp;gt; false, :length &#x3D;&amp;gt;",
+    "description": "Mysql2::Error: BLOB/TEXT in /db/migrate/createimpressionstable.rb  找到 add_index :impressions, [:impressionable_type, :impressionable_id, :params], :name &#x3D;&amp;gt; &quot;poly_params_request_index&quot;, :unique &#x3D;&amp;gt; false   加入 :length &#x3D;&gt; {:params &#x3D;&gt; 255 }  add_index :impressions, [:impressionable_type, :impressionable_id, :params], :name &#x3D;&amp;gt; &quot;poly_params_request_index&quot;, :unique &#x3D;&amp;gt; false, :length &#x3D;&amp;gt;",
     "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": "http://localhost:2368"
@@ -112,11 +112,13 @@
 <p>in /db/migrate/create<em>impressions</em>table.rb <br>
 找到</p>
 
-<p><code>add_index :impressions, [:impressionable_type, :impressionable_id, :params], :name =&gt; "poly_params_request_index", :unique =&gt; false</code></p>
+<pre><code>add_index :impressions, [:impressionable_type, :impressionable_id, :params], :name =&gt; "poly_params_request_index", :unique =&gt; false  
+</code></pre>
 
 <p>加入 :length =&gt; {:params =&gt; 255 } </p>
 
-<p><code>add_index :impressions, [:impressionable_type, :impressionable_id, :params], :name =&gt; "poly_params_request_index", :unique =&gt; false, :length =&gt; {:params =&gt; 255 }</code></p>
+<pre><code>add_index :impressions, [:impressionable_type, :impressionable_id, :params], :name =&gt; "poly_params_request_index", :unique =&gt; false, :length =&gt; {:params =&gt; 255 }  
+</code></pre>
         </section>
 
         <footer class="post-footer">
