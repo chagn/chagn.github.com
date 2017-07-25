@@ -1,4 +1,77 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>Ruby on Rails Developers</title><description>Ruby on Rails Developers</description><link>http://localhost:2368/</link><generator>Ghost 0.11</generator><lastBuildDate>Mon, 24 Jul 2017 14:47:32 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>Nginx gzip</title><description>&lt;h6 id=""&gt;目的&lt;/h6&gt;
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>Ruby on Rails Developers</title><description>Ruby on Rails Developers</description><link>http://localhost:2368/</link><generator>Ghost 0.11</generator><lastBuildDate>Tue, 25 Jul 2017 17:46:47 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>Rails Cache</title><description>&lt;h6 id=""&gt;設定&lt;/h6&gt;
+
+&lt;p&gt;install memchached  &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# mac
+brew install memcached  
+# ubuntu
+$ sudo apt-get install memcached
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;in &lt;code&gt;Gemfile&lt;/code&gt;  &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# cache
+gem "dalli"  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;in &lt;code&gt;config/environments/production.rb&lt;/code&gt; 修改cache_store方式  &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;- config.cache_store = :memory_store
++ config.cache_store = :mem_cache_store
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;development 下測試, 開起cache  &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;config.action_controller.perform_caching = true  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;啟用 &lt;code&gt;memcached&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;* memcached -l 127.&lt;/code&gt;&lt;/pre&gt;</description><link>http://localhost:2368/rails-cache/</link><guid isPermaLink="false">a6dd9c03-1a55-465b-b60c-a6e70aebb72f</guid><category>Ruby on Rails</category><category>cache</category><dc:creator>Vincent</dc:creator><pubDate>Tue, 25 Jul 2017 17:46:03 GMT</pubDate><content:encoded>&lt;h6 id=""&gt;設定&lt;/h6&gt;
+
+&lt;p&gt;install memchached  &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# mac
+brew install memcached  
+# ubuntu
+$ sudo apt-get install memcached
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;in &lt;code&gt;Gemfile&lt;/code&gt;  &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# cache
+gem "dalli"  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;in &lt;code&gt;config/environments/production.rb&lt;/code&gt; 修改cache_store方式  &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;- config.cache_store = :memory_store
++ config.cache_store = :mem_cache_store
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;development 下測試, 開起cache  &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;config.action_controller.perform_caching = true  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;啟用 &lt;code&gt;memcached&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;* memcached -l 127.0.0.1 -P 11211 -m 128 -d for deamon
+* memcached -l 127.0.0.1 -P 11211 -m 128 -vv for development debug
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;hr&gt;
+
+&lt;h6 id=""&gt;使用&lt;/h6&gt;
+
+&lt;p&gt;&lt;a href="https://ihower.tw/rails/caching.html"&gt;https://ihower.tw/rails/caching.html&lt;/a&gt;  &lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h6 id=""&gt;參考&lt;/h6&gt;
+
+&lt;p&gt;&lt;a href="https://ihower.tw/blog/archives/1768"&gt;https://ihower.tw/blog/archives/1768&lt;/a&gt; &lt;br&gt;
+&lt;a href="https://ruby-china.org/topics/19436"&gt;https://ruby-china.org/topics/19436&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title>Nginx gzip</title><description>&lt;h6 id=""&gt;目的&lt;/h6&gt;
 
 &lt;p&gt;啟用gzip, 壓縮javascript&amp;amp;css, 增進網頁效能.&lt;/p&gt;
 
