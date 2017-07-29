@@ -1,0 +1,241 @@
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Rails validattion messages</title>
+    <meta name="description" content="">
+
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="../favicon.ico">
+
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic%7COpen+Sans:700,400">
+    <link rel="stylesheet" type="text/css" href="../assets/css/screen.css?v=819251e986">
+
+
+    <link rel="canonical" href="index.html">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <link rel="amphtml" href="amp/index.html">
+    
+    <meta property="og:site_name" content="Ruby on Rails Developers">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Rails validattion messages">
+    <meta property="og:description" content='in zh-TW.yml   --- zh-TW:     errors:     # 錯誤訊息格式     # attribute =&amp;gt; 欄位名稱      # message =&amp;gt; 錯誤訊息      # count =&amp;gt; 對應數量     # value =&amp;gt; 輸入的值     format: "%{attribute} %{message}"     messages:       accepted: 必須是可被接受的       # validate method =&amp;gt; presence       blank: 不能為空白       present: 必須是空白       # validate method =&amp;gt; confirmation       confirmation: 兩次輸入須一致       empty: 不能留空       equal_to: 必須等於 %{count}       even: 必須是偶數       exclusion: 是被保留的關鍵字       greater_'>
+    <meta property="og:url" content="http://localhost:2368/rails-validattion-messages/">
+    <meta property="article:published_time" content="2017-07-29T12:05:19.000Z">
+    <meta property="article:modified_time" content="2017-07-29T12:05:42.000Z">
+    <meta property="article:tag" content="Ruby on Rails">
+    <meta property="article:tag" content="i18n">
+    
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Rails validattion messages">
+    <meta name="twitter:description" content='in zh-TW.yml   --- zh-TW:     errors:     # 錯誤訊息格式     # attribute =&amp;gt; 欄位名稱      # message =&amp;gt; 錯誤訊息      # count =&amp;gt; 對應數量     # value =&amp;gt; 輸入的值     format: "%{attribute} %{message}"     messages:       accepted: 必須是可被接受的       # validate method =&amp;gt; presence       blank: 不能為空白       present: 必須是空白       # validate method =&amp;gt; confirmation       confirmation: 兩次輸入須一致       empty: 不能留空       equal_to: 必須等於 %{count}       even: 必須是偶數       exclusion: 是被保留的關鍵字       greater_'>
+    <meta name="twitter:url" content="http://localhost:2368/rails-validattion-messages/">
+    <meta name="twitter:label1" content="Written by">
+    <meta name="twitter:data1" content="Vincent">
+    <meta name="twitter:label2" content="Filed under">
+    <meta name="twitter:data2" content="Ruby on Rails, i18n">
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Ruby on Rails Developers",
+        "logo": "http://localhost:2368/ghost/img/ghosticon.jpg"
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Vincent",
+        "url": "http://localhost:2368/author/yang/",
+        "sameAs": []
+    },
+    "headline": "Rails validattion messages",
+    "url": "http://localhost:2368/rails-validattion-messages/",
+    "datePublished": "2017-07-29T12:05:19.000Z",
+    "dateModified": "2017-07-29T12:05:42.000Z",
+    "keywords": "Ruby on Rails, i18n",
+    "description": "in zh-TW.yml   --- zh-TW:     errors:     # 錯誤訊息格式     # attribute &#x3D;&amp;gt; 欄位名稱      # message &#x3D;&amp;gt; 錯誤訊息      # count &#x3D;&amp;gt; 對應數量     # value &#x3D;&amp;gt; 輸入的值     format: &quot;%{attribute} %{message}&quot;     messages:       accepted: 必須是可被接受的       # validate method &#x3D;&amp;gt; presence       blank: 不能為空白       present: 必須是空白       # validate method &#x3D;&amp;gt; confirmation       confirmation: 兩次輸入須一致       empty: 不能留空       equal_to: 必須等於 %{count}       even: 必須是偶數       exclusion: 是被保留的關鍵字       greater_",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "http://localhost:2368"
+    }
+}
+    </script>
+
+    <meta name="generator" content="Ghost 0.11">
+    <link rel="alternate" type="application/rss+xml" title="Ruby on Rails Developers" href="../rss/index.html">
+</head>
+<body class="post-template tag-ruby-on-rails tag-i18n nav-closed">
+
+    <div class="nav">
+    <h3 class="nav-title">Menu</h3>
+    <a href="index.html#" class="nav-close">
+        <span class="hidden">Close</span>
+    </a>
+    <ul>
+            <li class="nav-home"><a href="../">Home</a></li>
+            <li class="nav-ruby-on-rails"><a href="../tag/ruby-on-rails/">Ruby on Rails</a></li>
+    </ul>
+        <a class="subscribe-button icon-feed" href="../rss/index.rss">Subscribe</a>
+</div>
+<span class="nav-cover"></span>
+
+
+    <div class="site-wrapper">
+
+        
+
+
+<header class="main-header post-head no-cover">
+    <nav class="main-nav  clearfix">
+        
+            <a class="menu-button icon-menu" href="index.html#"><span class="word">Menu</span></a>
+    </nav>
+</header>
+
+<main class="content" role="main">
+    <article class="post tag-ruby-on-rails tag-i18n">
+
+        <header class="post-header">
+            <h1 class="post-title">Rails validattion messages</h1>
+            <section class="post-meta">
+                <time class="post-date" datetime="2017-07-29">29 July 2017</time>  on <a href="../tag/ruby-on-rails/">Ruby on Rails</a>, <a href="../tag/i18n/">i18n</a>
+            </section>
+        </header>
+
+        <section class="post-content">
+            <p>in <code>zh-TW.yml</code>  </p>
+
+<pre><code>---
+zh-TW:  
+  errors:
+    # 錯誤訊息格式
+    # attribute =&gt; 欄位名稱 
+    # message =&gt; 錯誤訊息 
+    # count =&gt; 對應數量
+    # value =&gt; 輸入的值
+    format: "%{attribute} %{message}"
+    messages:
+      accepted: 必須是可被接受的
+      # validate method =&gt; presence
+      blank: 不能為空白
+      present: 必須是空白
+      # validate method =&gt; confirmation
+      confirmation: 兩次輸入須一致
+      empty: 不能留空
+      equal_to: 必須等於 %{count}
+      even: 必須是偶數
+      exclusion: 是被保留的關鍵字
+      greater_than: 必須大於 %{count}
+      greater_than_or_equal_to: 必須大於或等於 %{count}
+      # validate method =&gt; inclusion 
+      inclusion: "%{value} 沒有包含在列表中"
+      invalid: 是無效的
+      less_than: 必須小於 %{count}
+      less_than_or_equal_to: 必須小於或等於 %{count}
+      model_invalid: "校驗失敗: %{errors}"
+      not_a_number: 不是數字
+      not_an_integer: 必須是整數
+      odd: 必須是奇數
+      required: 必須存在
+      taken: 已經被使用
+      too_long:
+        one: 過長（最長是一個字）
+        other: 過長（最長是 %{count} 個字）
+      too_short:
+        one: 過短（最短是一個字）
+        other: 過短（最短是 %{count} 個字）
+      wrong_length:
+        one: 字數錯誤 (必須是一個字)
+        other: 字數錯誤 (必須是 %{count} 個字)
+      other_than: 不可以是 %{count} 個字
+</code></pre>
+
+<p><code>%{attribute} %{count} %{value}</code> 均可以使用在model客製化message中.</p>
+
+<hr>
+
+<h6 id="">想法</h6>
+
+<ol>
+<li><code>model.errors.full_messages.join("&lt;/br&gt;")</code> <br>
+但如果一個欄位有多個驗證未過, 欄位名稱會重複</li>
+<li><code>model.errors.messages.map{|k,v| "#{k} #{v.join("與")}"}.join("&lt;/br&gt;")</code> <br>
+這樣會整理同一個欄位的錯誤訊息</li>
+<li><code>model.errors.messages.values.join("&lt;/br&gt;")</code> <br>
+這樣只會顯示錯誤訊息, 適合客製化訊息的時候</li>
+</ol>
+
+<hr>
+
+<h6 id="">參考</h6>
+
+<ul>
+<li><a href="https://github.com/svenfuchs/rails-i18n/blob/master/rails/locale/zh-TW.yml">https://github.com/svenfuchs/rails-i18n/blob/master/rails/locale/zh-TW.yml</a> <br>
+有裝<code>gem 'rails-i18n'</code> 會自動使用這份, 如需要修改可以在<code>config/locales</code> 下新增這隻檔案再自行修改.</li>
+</ul>
+        </section>
+
+        <footer class="post-footer">
+
+
+
+            <section class="author">
+                <h4><a href="../author/yang/">Vincent</a></h4>
+
+                    <p>Read <a href="../author/yang/">more posts</a> by this author.</p>
+                <div class="author-meta">
+                    
+                    
+                </div>
+            </section>
+
+
+            <section class="share">
+                <h4>Share this post</h4>
+                <a class="icon-twitter" href="https://twitter.com/intent/tweet?text=Rails%20validattion%20messages&amp;url=http://localhost:2368/rails-validattion-messages/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <span class="hidden">Twitter</span>
+                </a>
+                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:2368/rails-validattion-messages/" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <span class="hidden">Facebook</span>
+                </a>
+                <a class="icon-google-plus" href="https://plus.google.com/share?url=http://localhost:2368/rails-validattion-messages/" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <span class="hidden">Google+</span>
+                </a>
+            </section>
+
+
+        </footer>
+
+    </article>
+</main>
+
+<aside class="read-next">
+    <a class="read-next-story prev no-cover" href="../rails-cache/">
+        <section class="post">
+            <h2>Rails Cache</h2>
+            <p>設定 install memchached   # mac brew install memcached   # ubuntu $ sudo apt-get install memcached in Gemfile   # cache gem "dalli"   in config/…</p>
+        </section>
+    </a>
+</aside>
+
+
+
+        <footer class="site-footer clearfix">
+            <section class="copyright"><a href="../">Ruby on Rails Developers</a> © 2017</section>
+            <section class="poweredby">Proudly published with <a href="https://ghost.org">Ghost</a></section>
+        </footer>
+
+    </div>
+
+    <!-- <script type="text/javascript" src="//code.jquery.com/jquery-1.12.0.min.js"></script> -->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    
+    <script type="text/javascript" src="../assets/js/jquery.fitvids.js?v=819251e986"></script>
+    <script type="text/javascript" src="../assets/js/index.js?v=819251e986"></script>
+
+</body>

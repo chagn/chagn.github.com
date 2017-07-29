@@ -1,4 +1,95 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>Ruby on Rails Developers</title><description>Ruby on Rails Developers</description><link>http://localhost:2368/</link><generator>Ghost 0.11</generator><lastBuildDate>Tue, 25 Jul 2017 17:46:47 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>Rails Cache</title><description>&lt;h6 id=""&gt;設定&lt;/h6&gt;
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>Ruby on Rails Developers</title><description>Ruby on Rails Developers</description><link>http://localhost:2368/</link><generator>Ghost 0.11</generator><lastBuildDate>Sat, 29 Jul 2017 12:18:01 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>Rails validattion messages</title><description>&lt;p&gt;in &lt;code&gt;zh-TW.yml&lt;/code&gt;  &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;---
+zh-TW:  
+  errors:
+    # 錯誤訊息格式
+    # attribute =&amp;gt; 欄位名稱 
+    # message =&amp;gt; 錯誤訊息 
+    # count =&amp;gt; 對應數量
+    # value =&amp;gt; 輸入的值
+    format: "%{attribute} %{message}"
+    messages:
+      accepted: 必須是可被接受的
+      # validate method =&amp;gt; presence
+      blank: 不能為空白
+      present: 必須是空白
+      # validate method =&amp;gt; confirmation
+      confirmation: 兩次輸入須一致
+      empty: 不能留空
+      equal_to: 必須等於 %{count}
+      even: 必須是偶數
+      exclusion: 是被保留的關鍵字
+      greater_&lt;/code&gt;&lt;/pre&gt;</description><link>http://localhost:2368/rails-validattion-messages/</link><guid isPermaLink="false">0362c192-52ed-4058-a6d4-f326ab511503</guid><category>Ruby on Rails</category><category>i18n</category><dc:creator>Vincent</dc:creator><pubDate>Sat, 29 Jul 2017 12:05:19 GMT</pubDate><content:encoded>&lt;p&gt;in &lt;code&gt;zh-TW.yml&lt;/code&gt;  &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;---
+zh-TW:  
+  errors:
+    # 錯誤訊息格式
+    # attribute =&amp;gt; 欄位名稱 
+    # message =&amp;gt; 錯誤訊息 
+    # count =&amp;gt; 對應數量
+    # value =&amp;gt; 輸入的值
+    format: "%{attribute} %{message}"
+    messages:
+      accepted: 必須是可被接受的
+      # validate method =&amp;gt; presence
+      blank: 不能為空白
+      present: 必須是空白
+      # validate method =&amp;gt; confirmation
+      confirmation: 兩次輸入須一致
+      empty: 不能留空
+      equal_to: 必須等於 %{count}
+      even: 必須是偶數
+      exclusion: 是被保留的關鍵字
+      greater_than: 必須大於 %{count}
+      greater_than_or_equal_to: 必須大於或等於 %{count}
+      # validate method =&amp;gt; inclusion 
+      inclusion: "%{value} 沒有包含在列表中"
+      invalid: 是無效的
+      less_than: 必須小於 %{count}
+      less_than_or_equal_to: 必須小於或等於 %{count}
+      model_invalid: "校驗失敗: %{errors}"
+      not_a_number: 不是數字
+      not_an_integer: 必須是整數
+      odd: 必須是奇數
+      required: 必須存在
+      taken: 已經被使用
+      too_long:
+        one: 過長（最長是一個字）
+        other: 過長（最長是 %{count} 個字）
+      too_short:
+        one: 過短（最短是一個字）
+        other: 過短（最短是 %{count} 個字）
+      wrong_length:
+        one: 字數錯誤 (必須是一個字)
+        other: 字數錯誤 (必須是 %{count} 個字)
+      other_than: 不可以是 %{count} 個字
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;code&gt;%{attribute} %{count} %{value}&lt;/code&gt; 均可以使用在model客製化message中.&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h6 id=""&gt;想法&lt;/h6&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;model.errors.full_messages.join("&amp;lt;/br&amp;gt;")&lt;/code&gt; &lt;br&gt;
+但如果一個欄位有多個驗證未過, 欄位名稱會重複&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;model.errors.messages.map{|k,v| "#{k} #{v.join("與")}"}.join("&amp;lt;/br&amp;gt;")&lt;/code&gt; &lt;br&gt;
+這樣會整理同一個欄位的錯誤訊息&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;model.errors.messages.values.join("&amp;lt;/br&amp;gt;")&lt;/code&gt; &lt;br&gt;
+這樣只會顯示錯誤訊息, 適合客製化訊息的時候&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;hr&gt;
+
+&lt;h6 id=""&gt;參考&lt;/h6&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/svenfuchs/rails-i18n/blob/master/rails/locale/zh-TW.yml"&gt;https://github.com/svenfuchs/rails-i18n/blob/master/rails/locale/zh-TW.yml&lt;/a&gt; &lt;br&gt;
+有裝&lt;code&gt;gem 'rails-i18n'&lt;/code&gt; 會自動使用這份, 如需要修改可以在&lt;code&gt;config/locales&lt;/code&gt; 下新增這隻檔案再自行修改.&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title>Rails Cache</title><description>&lt;h6 id=""&gt;設定&lt;/h6&gt;
 
 &lt;p&gt;install memchached  &lt;/p&gt;
 
