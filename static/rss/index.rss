@@ -1,4 +1,89 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>Ruby on Rails Developers</title><description>Ruby on Rails Developers</description><link>http://localhost:2368/</link><generator>Ghost 0.11</generator><lastBuildDate>Sat, 29 Jul 2017 12:18:01 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>Rails validattion messages</title><description>&lt;p&gt;in &lt;code&gt;zh-TW.yml&lt;/code&gt;  &lt;/p&gt;
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>Ruby on Rails Developers</title><description>Ruby on Rails Developers</description><link>http://localhost:2368/</link><generator>Ghost 0.11</generator><lastBuildDate>Tue, 01 Aug 2017 06:35:36 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>Godaddy SSL</title><description>&lt;h6 id=""&gt;作法&lt;/h6&gt;
+
+&lt;ul&gt;
+&lt;li&gt;在godaddy購買憑證後&lt;/li&gt;
+&lt;li&gt;利用openssl產生憑證(csr key)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;openssl req -new -newkey rsa:2048 -nodes -keyout name.key -out name.csr
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;填寫資料  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt; Country Name (2 letter code) [AU]:TW                                                   //國碼臺灣是 TW
+ State or Province Name (full name) [Some-State]:Taiwan R.O.C                           //國名臺灣填 Taiwan
+ Locality Name (eg, city) []:Taipei                                                     //地名
+ Organization Name (eg,&lt;/code&gt;&lt;/pre&gt;</description><link>http://localhost:2368/godaddy-ssl/</link><guid isPermaLink="false">afa4ed75-5a95-4ad6-ab54-b438d8237a94</guid><dc:creator>Vincent</dc:creator><pubDate>Tue, 01 Aug 2017 06:35:24 GMT</pubDate><content:encoded>&lt;h6 id=""&gt;作法&lt;/h6&gt;
+
+&lt;ul&gt;
+&lt;li&gt;在godaddy購買憑證後&lt;/li&gt;
+&lt;li&gt;利用openssl產生憑證(csr key)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;openssl req -new -newkey rsa:2048 -nodes -keyout name.key -out name.csr
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;填寫資料  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt; Country Name (2 letter code) [AU]:TW                                                   //國碼臺灣是 TW
+ State or Province Name (full name) [Some-State]:Taiwan R.O.C                           //國名臺灣填 Taiwan
+ Locality Name (eg, city) []:Taipei                                                     //地名
+ Organization Name (eg, company) [Internet Widgits Pty Ltd]:FreeBSD Personal Reserach   //組織單位名稱
+ Organizational Unit Name (eg, section) []:FreeBSD Personal Reserach                    //部門名稱
+ Common Name (eg, YOUR name) []: domain                                           //網域名稱
+ Email Address []:weithenn@weithenn.org                                                 //申請單位的聯絡信箱
+ Please enter the following 'extra' attributes
+ to be sent with your certificate request
+ A challenge password []:按 Enter 直接跳過                                              //申請書的密碼
+ An optional company name []:按 Enter 直接跳過                                          //憑證代辦公司的名稱
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;把&lt;code&gt;name.csr&lt;/code&gt;的內容貼到godaddy&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;驗證網域所有權&lt;/p&gt;
+
+&lt;ul&gt;&lt;li&gt;html -&gt; 在 &lt;code&gt;/.well-known/pki-validation/godaddy.html&lt;/code&gt; 中key入驗證文字&lt;/li&gt;
+&lt;li&gt;DNS -&gt; 利用txt紀錄做驗證&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;取得憑證, 將剛下載的兩個檔案合併為一個檔&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;$ sudo cat your_domain_name.crt DigiCertCA.crt &amp;gt;&amp;gt; bundle.crt
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;上傳至伺服器, 並設定ssl nginx&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;    listen 443 ssl;
+    ssl on;
+    #設定憑證金鑰的路徑
+    ssl_certificate /path/bundle.crt;
+    ssl_certificate_key /path/bbsearching.key;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;將http轉至https&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;server {  
+        listen 80;
+        server_name domain.com;
+        rewrite ^(.*) https://domain.com$1 permanent;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;hr&gt;
+
+&lt;h6 id=""&gt;參考&lt;/h6&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://force416.github.io/eric_profile/2016/07/21/godaddy-ssl-and-nginx-install/"&gt;http://force416.github.io/eric_profile/2016/07/21/godaddy-ssl-and-nginx-install/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://wiki.weithenn.org/cgi-bin/wiki.pl?SSL"&gt;http://wiki.weithenn.org/cgi-bin/wiki.pl?SSL&lt;/a&gt;&lt;em&gt;Certificate-%E8%87%AA%E8%A1%8C%E7%94%A2%E7%94%9F&lt;/em&gt;SSL_%E6%86%91%E8%AD%89&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title>Rails validattion messages</title><description>&lt;p&gt;in &lt;code&gt;zh-TW.yml&lt;/code&gt;  &lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;---
 zh-TW:  
