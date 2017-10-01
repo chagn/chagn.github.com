@@ -12,7 +12,7 @@
     <link rel="shortcut icon" href="favicon.ico">
 
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic%7COpen+Sans:700,400">
-    <link rel="stylesheet" type="text/css" href="assets/css/screen.css?v=819251e986">
+    <link rel="stylesheet" type="text/css" href="assets/css/screen.css?v=80054160a9">
 
 
     <link rel="canonical" href="index.html">
@@ -84,12 +84,54 @@
 
     <div class="extra-pagination inner">
     <nav class="pagination" role="navigation">
-    <span class="page-number">Page 1 of 2</span>
+    <span class="page-number">Page 1 of 3</span>
         <a class="older-posts" href="page/2/">Older Posts <span aria-hidden="true">→</span></a>
 </nav>
 
 </div>
 
+<article class="post tag-nvm tag-node-js">
+    <header class="post-header">
+        <h2 class="post-title"><a href="install-nvm-on-mac/">install nvm on mac</a></h2>
+    </header>
+    <section class="post-excerpt">
+        <p>參考 http://icarus4.logdown.com/posts/175092-nodejs-installation-guide 問題 mac 重開機後會找不到nvm, 故無法切換版本, 需要從新跑 echo "source $(brew --prefix nvm)/nvm.sh" &gt;&gt; .bash_profile   . ~/.bash_profile   nvm <a class="read-more" href="install-nvm-on-mac/">»</a></p>
+    </section>
+    <footer class="post-meta">
+        
+        <a href="author/yang/">Vincent</a>
+         on <a href="tag/nvm/">nvm</a>, <a href="tag/node-js/">node.js</a>
+        <time class="post-date" datetime="2017-10-01">01 October 2017</time>
+    </footer>
+</article>
+<article class="post tag-ruby-on-rails tag-gmail">
+    <header class="post-header">
+        <h2 class="post-title"><a href="rails-gmail-smtp/">Gmail SMTP 設定</a></h2>
+    </header>
+    <section class="post-excerpt">
+        <p>gmail 設定 允許安全性較低的應用程式存取您的帳戶 https://myaccount.google.com/lesssecureapps rails 設定 in config/environments/development.rb     config.action_mailer.smtp_settings = {     :address =&gt; "smtp.gmail.com",     :port <a class="read-more" href="rails-gmail-smtp/">»</a></p>
+    </section>
+    <footer class="post-meta">
+        
+        <a href="author/yang/">Vincent</a>
+         on <a href="tag/ruby-on-rails/">Ruby on Rails</a>, <a href="tag/gmail/">Gmail</a>
+        <time class="post-date" datetime="2017-10-01">01 October 2017</time>
+    </footer>
+</article>
+<article class="post tag-ruby-on-rails tag-line tag-line-notify">
+    <header class="post-header">
+        <h2 class="post-title"><a href="rails-line-notify/">Rails Line notify 串接</a></h2>
+    </header>
+    <section class="post-excerpt">
+        <p>line notify 網站設定 註冊 line notify  https://notify-bot.line.me/zh_TW/   管理登錄服務 新建登錄服務 設定 Callback URL (最多五組)  如果使用 gem 'omniauth-line-notify' 設定如下 http://DOMAIN/auth/line_ <a class="read-more" href="rails-line-notify/">»</a></p>
+    </section>
+    <footer class="post-meta">
+        
+        <a href="author/yang/">Vincent</a>
+         on <a href="tag/ruby-on-rails/">Ruby on Rails</a>, <a href="tag/line/">Line</a>, <a href="tag/line-notify/">Line Notify</a>
+        <time class="post-date" datetime="2017-10-01">01 October 2017</time>
+    </footer>
+</article>
 <article class="post">
     <header class="post-header">
         <h2 class="post-title"><a href="godaddy-ssl/">Godaddy SSL</a></h2>
@@ -118,51 +160,9 @@
         <time class="post-date" datetime="2017-07-29">29 July 2017</time>
     </footer>
 </article>
-<article class="post tag-ruby-on-rails tag-cache">
-    <header class="post-header">
-        <h2 class="post-title"><a href="rails-cache/">Rails Cache</a></h2>
-    </header>
-    <section class="post-excerpt">
-        <p>設定 install memchached   # mac brew install memcached   # ubuntu $ sudo apt-get install memcached in Gemfile   # cache gem "dalli"   in config/environments/production.rb 修改cache_store方式   - config. <a class="read-more" href="rails-cache/">»</a></p>
-    </section>
-    <footer class="post-meta">
-        
-        <a href="author/yang/">Vincent</a>
-         on <a href="tag/ruby-on-rails/">Ruby on Rails</a>, <a href="tag/cache/">cache</a>
-        <time class="post-date" datetime="2017-07-25">25 July 2017</time>
-    </footer>
-</article>
-<article class="post tag-nginx">
-    <header class="post-header">
-        <h2 class="post-title"><a href="nginx-gzip/">Nginx gzip</a></h2>
-    </header>
-    <section class="post-excerpt">
-        <p>目的 啟用gzip, 壓縮javascript&amp;css, 增進網頁效能. add in /opt/nginx/conf/nginx.conf gzip  on; gzip_static on; gzip_min_length 1k; gzip_buffers 4 16k; <a class="read-more" href="nginx-gzip/">»</a></p>
-    </section>
-    <footer class="post-meta">
-        
-        <a href="author/yang/">Vincent</a>
-         on <a href="tag/nginx/">nginx</a>
-        <time class="post-date" datetime="2017-07-24">24 July 2017</time>
-    </footer>
-</article>
-<article class="post tag-ruby-on-rails tag-nokogiri">
-    <header class="post-header">
-        <h2 class="post-title"><a href="nokogiri/">Nokogiri</a></h2>
-    </header>
-    <section class="post-excerpt">
-        <p>用途 解析Html結構, 可用於爬蟲 基本方法 讀取Html  doc = Nokogiri::HTML(file, nil, "編碼")  file 可以是是網址   require 'open-uri'   doc = Nokogiri::HTML(open( url ), nil, 'UTF-8' )   或是檔案路徑   doc = Nokogiri::HTML( <a class="read-more" href="nokogiri/">»</a></p>
-    </section>
-    <footer class="post-meta">
-        
-        <a href="author/yang/">Vincent</a>
-         on <a href="tag/ruby-on-rails/">Ruby on Rails</a>, <a href="tag/nokogiri/">Nokogiri</a>
-        <time class="post-date" datetime="2017-07-23">23 July 2017</time>
-    </footer>
-</article>
 
 <nav class="pagination" role="navigation">
-    <span class="page-number">Page 1 of 2</span>
+    <span class="page-number">Page 1 of 3</span>
         <a class="older-posts" href="page/2/">Older Posts <span aria-hidden="true">→</span></a>
 </nav>
 
@@ -180,7 +180,7 @@
     <!-- <script type="text/javascript" src="//code.jquery.com/jquery-1.12.0.min.js"></script> -->
     <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
     
-    <script type="text/javascript" src="assets/js/jquery.fitvids.js?v=819251e986"></script>
-    <script type="text/javascript" src="assets/js/index.js?v=819251e986"></script>
+    <script type="text/javascript" src="assets/js/jquery.fitvids.js?v=80054160a9"></script>
+    <script type="text/javascript" src="assets/js/index.js?v=80054160a9"></script>
 
 </body>

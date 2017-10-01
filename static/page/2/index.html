@@ -12,12 +12,13 @@
     <link rel="shortcut icon" href="../../favicon.ico">
 
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic%7COpen+Sans:700,400">
-    <link rel="stylesheet" type="text/css" href="../../assets/css/screen.css?v=819251e986">
+    <link rel="stylesheet" type="text/css" href="../../assets/css/screen.css?v=80054160a9">
 
 
     <link rel="canonical" href="index.html">
     <meta name="referrer" content="no-referrer-when-downgrade">
     <link rel="prev" href="../../index.html">
+    <link rel="next" href="../3/index.html">
     <meta name="generator" content="Ghost 0.11">
     <link rel="alternate" type="application/rss+xml" title="Ruby on Rails Developers" href="../../rss/index.html">
 </head>
@@ -59,11 +60,54 @@
     <div class="extra-pagination inner">
     <nav class="pagination" role="navigation">
         <a class="newer-posts" href="../../"><span aria-hidden="true">←</span> Newer Posts</a>
-    <span class="page-number">Page 2 of 2</span>
+    <span class="page-number">Page 2 of 3</span>
+        <a class="older-posts" href="../3/">Older Posts <span aria-hidden="true">→</span></a>
 </nav>
 
 </div>
 
+<article class="post tag-ruby-on-rails tag-cache">
+    <header class="post-header">
+        <h2 class="post-title"><a href="../../rails-cache/">Rails Cache</a></h2>
+    </header>
+    <section class="post-excerpt">
+        <p>設定 install memchached   # mac brew install memcached   # ubuntu $ sudo apt-get install memcached in Gemfile   # cache gem "dalli"   in config/environments/production.rb 修改cache_store方式   - config. <a class="read-more" href="../../rails-cache/">»</a></p>
+    </section>
+    <footer class="post-meta">
+        
+        <a href="../../author/yang/">Vincent</a>
+         on <a href="../../tag/ruby-on-rails/">Ruby on Rails</a>, <a href="../../tag/cache/">cache</a>
+        <time class="post-date" datetime="2017-07-25">25 July 2017</time>
+    </footer>
+</article>
+<article class="post tag-nginx">
+    <header class="post-header">
+        <h2 class="post-title"><a href="../../nginx-gzip/">Nginx gzip</a></h2>
+    </header>
+    <section class="post-excerpt">
+        <p>目的 啟用gzip, 壓縮javascript&amp;css, 增進網頁效能. add in /opt/nginx/conf/nginx.conf gzip  on; gzip_static on; gzip_min_length 1k; gzip_buffers 4 16k; <a class="read-more" href="../../nginx-gzip/">»</a></p>
+    </section>
+    <footer class="post-meta">
+        
+        <a href="../../author/yang/">Vincent</a>
+         on <a href="../../tag/nginx/">nginx</a>
+        <time class="post-date" datetime="2017-07-24">24 July 2017</time>
+    </footer>
+</article>
+<article class="post tag-ruby-on-rails tag-nokogiri">
+    <header class="post-header">
+        <h2 class="post-title"><a href="../../nokogiri/">Nokogiri</a></h2>
+    </header>
+    <section class="post-excerpt">
+        <p>用途 解析Html結構, 可用於爬蟲 基本方法 讀取Html  doc = Nokogiri::HTML(file, nil, "編碼")  file 可以是是網址   require 'open-uri'   doc = Nokogiri::HTML(open( url ), nil, 'UTF-8' )   或是檔案路徑   doc = Nokogiri::HTML( <a class="read-more" href="../../nokogiri/">»</a></p>
+    </section>
+    <footer class="post-meta">
+        
+        <a href="../../author/yang/">Vincent</a>
+         on <a href="../../tag/ruby-on-rails/">Ruby on Rails</a>, <a href="../../tag/nokogiri/">Nokogiri</a>
+        <time class="post-date" datetime="2017-07-23">23 July 2017</time>
+    </footer>
+</article>
 <article class="post tag-ruby-on-rails">
     <header class="post-header">
         <h2 class="post-title"><a href="../../render_to_string/">Ruby on Rails method render_to_string</a></h2>
@@ -92,24 +136,11 @@
         <time class="post-date" datetime="2017-07-22">22 July 2017</time>
     </footer>
 </article>
-<article class="post tag-ruby-on-rails">
-    <header class="post-header">
-        <h2 class="post-title"><a href="../../impressionist-mysql-errors/">impressionist mysql errors</a></h2>
-    </header>
-    <section class="post-excerpt">
-        <p>Mysql2::Error: BLOB/TEXT in /db/migrate/createimpressionstable.rb  找到 add_index :impressions, [:impressionable_type, :impressionable_id, :params], :name =&gt; "poly_params_request_index", :unique =&gt; <a class="read-more" href="../../impressionist-mysql-errors/">»</a></p>
-    </section>
-    <footer class="post-meta">
-        
-        <a href="../../author/yang/">Vincent</a>
-         on <a href="../../tag/ruby-on-rails/">Ruby on Rails</a>
-        <time class="post-date" datetime="2017-07-21">21 July 2017</time>
-    </footer>
-</article>
 
 <nav class="pagination" role="navigation">
         <a class="newer-posts" href="../../"><span aria-hidden="true">←</span> Newer Posts</a>
-    <span class="page-number">Page 2 of 2</span>
+    <span class="page-number">Page 2 of 3</span>
+        <a class="older-posts" href="../3/">Older Posts <span aria-hidden="true">→</span></a>
 </nav>
 
 
@@ -126,7 +157,7 @@
     <!-- <script type="text/javascript" src="//code.jquery.com/jquery-1.12.0.min.js"></script> -->
     <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
     
-    <script type="text/javascript" src="../../assets/js/jquery.fitvids.js?v=819251e986"></script>
-    <script type="text/javascript" src="../../assets/js/index.js?v=819251e986"></script>
+    <script type="text/javascript" src="../../assets/js/jquery.fitvids.js?v=80054160a9"></script>
+    <script type="text/javascript" src="../../assets/js/index.js?v=80054160a9"></script>
 
 </body>

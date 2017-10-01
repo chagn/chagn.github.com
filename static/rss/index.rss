@@ -1,4 +1,167 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>Ruby on Rails Developers</title><description>Ruby on Rails Developers</description><link>http://localhost:2368/</link><generator>Ghost 0.11</generator><lastBuildDate>Tue, 01 Aug 2017 06:35:36 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>Godaddy SSL</title><description>&lt;h6 id=""&gt;作法&lt;/h6&gt;
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>Ruby on Rails Developers</title><description>Ruby on Rails Developers</description><link>http://localhost:2368/</link><generator>Ghost 0.11</generator><lastBuildDate>Sun, 01 Oct 2017 08:58:20 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>install nvm on mac</title><description>&lt;h6 id=""&gt;參考&lt;/h6&gt;
+
+&lt;p&gt;&lt;a href="http://icarus4.logdown.com/posts/175092-nodejs-installation-guide"&gt;http://icarus4.logdown.com/posts/175092-nodejs-installation-guide&lt;/a&gt;&lt;/p&gt;
+
+&lt;h6 id=""&gt;問題&lt;/h6&gt;
+
+&lt;ul&gt;
+&lt;li&gt;mac 重開機後會找不到nvm, 故無法切換版本, 需要從新跑&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;echo "source $(brew --prefix nvm)/nvm.sh" &amp;gt;&amp;gt; .bash_profile  
+. ~/.bash_profile  
+nvm use --delete-prefix v6.11.1  
+&lt;/code&gt;&lt;/pre&gt;</description><link>http://localhost:2368/install-nvm-on-mac/</link><guid isPermaLink="false">9da1bff0-baaa-4b2e-b47e-a934295a1538</guid><category>nvm</category><category>node.js</category><dc:creator>Vincent</dc:creator><pubDate>Sun, 01 Oct 2017 08:57:37 GMT</pubDate><content:encoded>&lt;h6 id=""&gt;參考&lt;/h6&gt;
+
+&lt;p&gt;&lt;a href="http://icarus4.logdown.com/posts/175092-nodejs-installation-guide"&gt;http://icarus4.logdown.com/posts/175092-nodejs-installation-guide&lt;/a&gt;&lt;/p&gt;
+
+&lt;h6 id=""&gt;問題&lt;/h6&gt;
+
+&lt;ul&gt;
+&lt;li&gt;mac 重開機後會找不到nvm, 故無法切換版本, 需要從新跑&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;echo "source $(brew --prefix nvm)/nvm.sh" &amp;gt;&amp;gt; .bash_profile  
+. ~/.bash_profile  
+nvm use --delete-prefix v6.11.1  
+&lt;/code&gt;&lt;/pre&gt;</content:encoded></item><item><title>Gmail SMTP 設定</title><description>&lt;h6 id="gmail"&gt;gmail 設定&lt;/h6&gt;
+
+&lt;ul&gt;
+&lt;li&gt;允許安全性較低的應用程式存取您的帳戶 &lt;a href="https://myaccount.google.com/lesssecureapps"&gt;https://myaccount.google.com/lesssecureapps&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;h6 id="rails"&gt;rails 設定&lt;/h6&gt;
+
+&lt;p&gt;in config/environments/development.rb  &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;  config.action_mailer.smtp_settings = {
+    :address =&amp;gt; "smtp.gmail.com",
+    :port =&amp;gt; "587",
+    :domain =&amp;gt; "gmail.com",
+    :authentication =&amp;gt; "plain",
+    :user_name =&amp;gt; ENV["gmail_user_name"],
+    :password =&amp;gt; ENV["gmail_password"],
+    :enable_starttls_auto&lt;/code&gt;&lt;/pre&gt;</description><link>http://localhost:2368/rails-gmail-smtp/</link><guid isPermaLink="false">c67d8685-e348-4ba4-95e3-3b713bad0002</guid><category>Ruby on Rails</category><category>Gmail</category><dc:creator>Vincent</dc:creator><pubDate>Sun, 01 Oct 2017 08:56:52 GMT</pubDate><content:encoded>&lt;h6 id="gmail"&gt;gmail 設定&lt;/h6&gt;
+
+&lt;ul&gt;
+&lt;li&gt;允許安全性較低的應用程式存取您的帳戶 &lt;a href="https://myaccount.google.com/lesssecureapps"&gt;https://myaccount.google.com/lesssecureapps&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;h6 id="rails"&gt;rails 設定&lt;/h6&gt;
+
+&lt;p&gt;in config/environments/development.rb  &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;  config.action_mailer.smtp_settings = {
+    :address =&amp;gt; "smtp.gmail.com",
+    :port =&amp;gt; "587",
+    :domain =&amp;gt; "gmail.com",
+    :authentication =&amp;gt; "plain",
+    :user_name =&amp;gt; ENV["gmail_user_name"],
+    :password =&amp;gt; ENV["gmail_password"],
+    :enable_starttls_auto =&amp;gt; true,
+  }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;hr&gt;
+
+&lt;h6 id=""&gt;優點&lt;/h6&gt;
+
+&lt;ul&gt;
+&lt;li&gt;spam 機率低&lt;/li&gt;
+&lt;li&gt;free &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h6 id=""&gt;缺點&lt;/h6&gt;
+
+&lt;ul&gt;
+&lt;li&gt;500 /days 限制&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title>Rails Line notify 串接</title><description>&lt;h6 id="linenotify"&gt;line notify 網站設定&lt;/h6&gt;
+
+&lt;ul&gt;
+&lt;li&gt;註冊 line notify &lt;br&gt;
+&lt;a href="https://notify-bot.line.me/zh_TW/"&gt;https://notify-bot.line.me/zh_TW/&lt;/a&gt;  &lt;/li&gt;
+&lt;li&gt;管理登錄服務&lt;/li&gt;
+&lt;li&gt;新建登錄服務&lt;/li&gt;
+&lt;li&gt;設定 Callback URL (最多五組) &lt;br&gt;
+如果使用 &lt;code&gt;gem 'omniauth-line-notify'&lt;/code&gt; 設定如下&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;http://DOMAIN/auth/line_notify/callback  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;取得 &lt;code&gt;LINE_NOTIFY_CLIEDNT_ID&lt;/code&gt; + &lt;code&gt;LINE_NOTIFY_APP_SECRET&lt;/code&gt; &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h6 id="rails"&gt;Rails 設定&lt;/h6&gt;
+
+&lt;ul&gt;
+&lt;li&gt;add &lt;code&gt;gem 'omniauth-line-notify&lt;/code&gt; in Gemfile&lt;/li&gt;
+&lt;li&gt;in &lt;code&gt;config/initializers/omniauth.rb&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;Rails.&lt;/code&gt;&lt;/pre&gt;</description><link>http://localhost:2368/rails-line-notify/</link><guid isPermaLink="false">e9f614bc-2207-4454-a58d-6f6988d1e884</guid><category>Ruby on Rails</category><category>Line</category><category>Line Notify</category><dc:creator>Vincent</dc:creator><pubDate>Sun, 01 Oct 2017 08:56:23 GMT</pubDate><content:encoded>&lt;h6 id="linenotify"&gt;line notify 網站設定&lt;/h6&gt;
+
+&lt;ul&gt;
+&lt;li&gt;註冊 line notify &lt;br&gt;
+&lt;a href="https://notify-bot.line.me/zh_TW/"&gt;https://notify-bot.line.me/zh_TW/&lt;/a&gt;  &lt;/li&gt;
+&lt;li&gt;管理登錄服務&lt;/li&gt;
+&lt;li&gt;新建登錄服務&lt;/li&gt;
+&lt;li&gt;設定 Callback URL (最多五組) &lt;br&gt;
+如果使用 &lt;code&gt;gem 'omniauth-line-notify'&lt;/code&gt; 設定如下&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;http://DOMAIN/auth/line_notify/callback  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;取得 &lt;code&gt;LINE_NOTIFY_CLIEDNT_ID&lt;/code&gt; + &lt;code&gt;LINE_NOTIFY_APP_SECRET&lt;/code&gt; &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h6 id="rails"&gt;Rails 設定&lt;/h6&gt;
+
+&lt;ul&gt;
+&lt;li&gt;add &lt;code&gt;gem 'omniauth-line-notify&lt;/code&gt; in Gemfile&lt;/li&gt;
+&lt;li&gt;in &lt;code&gt;config/initializers/omniauth.rb&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;Rails.application.config.middleware.use OmniAuth::Builder do  
+    provider :line_notify, ENV['LINE_NOTIFY_CLIEDNT_ID'], ENV['LINE_NOTIFY_APP_SECRET'], scope: 'notify'
+
+  OmniAuth.config.on_failure = Proc.new { |env|
+    OmniAuth::FailureEndpoint.new(env).redirect_to_failure
+  }
+end  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;in &lt;code&gt;config/routes&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;get'/auth/line_notify/callback' , to: "users/omniauth_callbacks#line_notify"  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;in omniauth&lt;em&gt;callbacks&lt;/em&gt;controller.rb 存取使用者授權後的line&lt;em&gt;notify&lt;/em&gt;token &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h6 id=""&gt;發送訊息&lt;/h6&gt;
+
+&lt;pre&gt;&lt;code&gt;RestClient.post 'https://notify-api.line.me/api/notify', {message: @line_notify_message}, { :Authorization =&amp;gt; "Bearer #{@line_notify_token}"}
+
+# @line_notify_message =&amp;gt; 訊息
+# @line_notify_token =&amp;gt; 取得的token
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h6 id=""&gt;參考&lt;/h6&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/blueplanet/omniauth-line-notify"&gt;https://github.com/blueplanet/omniauth-line-notify&lt;/a&gt; (但他範例中的provider是錯誤的)&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title>Godaddy SSL</title><description>&lt;h6 id=""&gt;作法&lt;/h6&gt;
 
 &lt;ul&gt;
 &lt;li&gt;在godaddy購買憑證後&lt;/li&gt;
