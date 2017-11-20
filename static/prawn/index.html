@@ -1,0 +1,229 @@
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Prawn</title>
+    <meta name="description" content="">
+
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="../favicon.ico">
+
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic%7COpen+Sans:700,400">
+    <link rel="stylesheet" type="text/css" href="../assets/css/screen.css?v=148949ff82">
+
+
+    <link rel="canonical" href="index.html">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <link rel="amphtml" href="amp/index.html">
+    
+    <meta property="og:site_name" content="Ruby on Rails Developers">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Prawn">
+    <meta property="og:description" content='bounding_box table Template repeat :all do   #do something end   頁碼 number_pages # 頁碼的字串, 會自動帶入&amp;lt;page&amp;gt; &amp;amp; &amp;lt;total&amp;gt; string = "Page:  &amp;lt;page&amp;gt;  of  &amp;lt;total&amp;gt; "   options = {     :at =&amp;gt; [bounds.right - 150, bounds.top - 55], # 出現的位置, 不確定能不能複數個   :width =&amp;gt; 150, # box的寬度   :align =&amp;gt;'>
+    <meta property="og:url" content="http://localhost:2368/prawn/">
+    <meta property="article:published_time" content="2017-11-20T11:35:28.000Z">
+    <meta property="article:modified_time" content="2017-11-20T11:36:01.000Z">
+    <meta property="article:tag" content="Ruby on Rails">
+    
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Prawn">
+    <meta name="twitter:description" content='bounding_box table Template repeat :all do   #do something end   頁碼 number_pages # 頁碼的字串, 會自動帶入&amp;lt;page&amp;gt; &amp;amp; &amp;lt;total&amp;gt; string = "Page:  &amp;lt;page&amp;gt;  of  &amp;lt;total&amp;gt; "   options = {     :at =&amp;gt; [bounds.right - 150, bounds.top - 55], # 出現的位置, 不確定能不能複數個   :width =&amp;gt; 150, # box的寬度   :align =&amp;gt;'>
+    <meta name="twitter:url" content="http://localhost:2368/prawn/">
+    <meta name="twitter:label1" content="Written by">
+    <meta name="twitter:data1" content="Vincent">
+    <meta name="twitter:label2" content="Filed under">
+    <meta name="twitter:data2" content="Ruby on Rails">
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Ruby on Rails Developers",
+        "logo": "http://localhost:2368/ghost/img/ghosticon.jpg"
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Vincent",
+        "url": "http://localhost:2368/author/yang/",
+        "sameAs": []
+    },
+    "headline": "Prawn",
+    "url": "http://localhost:2368/prawn/",
+    "datePublished": "2017-11-20T11:35:28.000Z",
+    "dateModified": "2017-11-20T11:36:01.000Z",
+    "keywords": "Ruby on Rails",
+    "description": "bounding_box table Template repeat :all do   #do something end   頁碼 number_pages # 頁碼的字串, 會自動帶入&amp;lt;page&amp;gt; &amp;amp; &amp;lt;total&amp;gt; string &#x3D; &quot;Page:  &amp;lt;page&amp;gt;  of  &amp;lt;total&amp;gt; &quot;   options &#x3D; {     :at &#x3D;&amp;gt; [bounds.right - 150, bounds.top - 55], # 出現的位置, 不確定能不能複數個   :width &#x3D;&amp;gt; 150, # box的寬度   :align &#x3D;&amp;gt;",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "http://localhost:2368"
+    }
+}
+    </script>
+
+    <meta name="generator" content="Ghost 0.11">
+    <link rel="alternate" type="application/rss+xml" title="Ruby on Rails Developers" href="../rss/index.html">
+</head>
+<body class="post-template tag-ruby-on-rails nav-closed">
+
+    <div class="nav">
+    <h3 class="nav-title">Menu</h3>
+    <a href="index.html#" class="nav-close">
+        <span class="hidden">Close</span>
+    </a>
+    <ul>
+            <li class="nav-home"><a href="../">Home</a></li>
+            <li class="nav-ruby-on-rails"><a href="../tag/ruby-on-rails/">Ruby on Rails</a></li>
+    </ul>
+        <a class="subscribe-button icon-feed" href="../rss/index.rss">Subscribe</a>
+</div>
+<span class="nav-cover"></span>
+
+
+    <div class="site-wrapper">
+
+        
+
+
+<header class="main-header post-head no-cover">
+    <nav class="main-nav  clearfix">
+        
+            <a class="menu-button icon-menu" href="index.html#"><span class="word">Menu</span></a>
+    </nav>
+</header>
+
+<main class="content" role="main">
+    <article class="post tag-ruby-on-rails">
+
+        <header class="post-header">
+            <h1 class="post-title">Prawn</h1>
+            <section class="post-meta">
+                <time class="post-date" datetime="2017-11-20">20 November 2017</time>  on <a href="../tag/ruby-on-rails/">Ruby on Rails</a>
+            </section>
+        </header>
+
+        <section class="post-content">
+            <h6 id="bounding_box">bounding_box</h6>
+
+<h6 id="table">table</h6>
+
+<h6 id="template">Template</h6>
+
+<pre><code>repeat :all do  
+#do something
+end  
+</code></pre>
+
+<h6 id="number_pages">頁碼 number_pages</h6>
+
+<pre><code># 頁碼的字串, 會自動帶入&lt;page&gt; &amp; &lt;total&gt;
+string = "Page:  &lt;page&gt;  of  &lt;total&gt; "  
+options = {  
+  :at =&gt; [bounds.right - 150, bounds.top - 55], # 出現的位置, 不確定能不能複數個
+  :width =&gt; 150, # box的寬度
+  :align =&gt; :right,
+  :page_filter =&gt; lambda{ |pg| pg != 1 }, # 哪幾頁不顯示
+  :start_count_at =&gt; 1, # 開始的數字
+  :total_pages =&gt; (page_count - 1), # page_count =&gt; 總頁數,  扣掉不要的就是你要計算的頁面數, 這裡扣掉封面，所以 -1
+  :color =&gt; "000000"
+}
+number_pages string, options  
+</code></pre>
+
+<h6 id="">中文字型</h6>
+
+<pre><code># 設定字型
+font_families.update("msjh" =&gt; {  
+  normal: "#{Rails.root}/public/font/msjh.ttf",
+  bold: "#{Rails.root}/public/font/msjh.ttf",
+  italic: "#{Rails.root}/public/font/msjh.ttf",
+  bold_italic: "#{Rails.root}/public/font/msjh.ttf",
+})
+# 選用字型
+font "msjh"
+</code></pre>
+
+<ul>
+<li>微軟正黑體TTF檔下載 <a href="https://cs.fit.edu/code/projects/ndworld/repository/changes/Resources/Fonts/msjh.ttf?rev=11">https://cs.fit.edu/code/projects/ndworld/repository/changes/Resources/Fonts/msjh.ttf?rev=11</a></li>
+</ul>
+
+<h6 id="pdf">如何直接在瀏覽器開啟PDF檔</h6>
+
+<pre><code>send_data pdf.render, filename: 'report.pdf', type: 'application/pdf', disposition: :inline  
+# disposition: :inline 參數不會自動觸發下載
+</code></pre>
+
+<h6 id="">參考</h6>
+
+<ul>
+<li>github <a href="https://github.com/prawnpdf/prawn">https://github.com/prawnpdf/prawn</a></li>
+<li>document <a href="http://prawnpdf.org/manual.pdf">http://prawnpdf.org/manual.pdf</a></li>
+<li>document <a href="http://www.rubydoc.info/github/sandal/prawn/">http://www.rubydoc.info/github/sandal/prawn/</a></li>
+<li>滿完整的範例 <a href="https://www.sitepoint.com/pdf-generation-rails/">https://www.sitepoint.com/pdf-generation-rails/</a></li>
+<li>Ruby China 有人分享的Slideshow <a href="http://quake.wang/slides/prawn/index.html#/">http://quake.wang/slides/prawn/index.html#/</a></li>
+</ul>
+        </section>
+
+        <footer class="post-footer">
+
+
+
+            <section class="author">
+                <h4><a href="../author/yang/">Vincent</a></h4>
+
+                    <p>Read <a href="../author/yang/">more posts</a> by this author.</p>
+                <div class="author-meta">
+                    
+                    
+                </div>
+            </section>
+
+
+            <section class="share">
+                <h4>Share this post</h4>
+                <a class="icon-twitter" href="https://twitter.com/intent/tweet?text=Prawn&amp;url=http://localhost:2368/prawn/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <span class="hidden">Twitter</span>
+                </a>
+                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:2368/prawn/" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <span class="hidden">Facebook</span>
+                </a>
+                <a class="icon-google-plus" href="https://plus.google.com/share?url=http://localhost:2368/prawn/" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <span class="hidden">Google+</span>
+                </a>
+            </section>
+
+
+        </footer>
+
+    </article>
+</main>
+
+<aside class="read-next">
+    <a class="read-next-story prev no-cover" href="../rails-globalize/">
+        <section class="post">
+            <h2>Rails Globalize</h2>
+            <p>migration create tables  in app/models/model.rb   # 需要語言包的欄位，與migration要對應 translates :name # 新增或編輯時補上缺少的語言，可以放在app/models/application_record.rb.rb…</p>
+        </section>
+    </a>
+</aside>
+
+
+
+        <footer class="site-footer clearfix">
+            <section class="copyright"><a href="../">Ruby on Rails Developers</a> © 2017</section>
+            <section class="poweredby">Proudly published with <a href="https://ghost.org">Ghost</a></section>
+        </footer>
+
+    </div>
+
+    <!-- <script type="text/javascript" src="//code.jquery.com/jquery-1.12.0.min.js"></script> -->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    
+    <script type="text/javascript" src="../assets/js/jquery.fitvids.js?v=148949ff82"></script>
+    <script type="text/javascript" src="../assets/js/index.js?v=148949ff82"></script>
+
+</body>

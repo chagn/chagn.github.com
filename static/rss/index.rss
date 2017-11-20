@@ -1,4 +1,137 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>Ruby on Rails Developers</title><description>Ruby on Rails Developers</description><link>http://localhost:2368/</link><generator>Ghost 0.11</generator><lastBuildDate>Sun, 01 Oct 2017 08:58:20 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>install nvm on mac</title><description>&lt;h6 id=""&gt;參考&lt;/h6&gt;
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>Ruby on Rails Developers</title><description>Ruby on Rails Developers</description><link>http://localhost:2368/</link><generator>Ghost 0.11</generator><lastBuildDate>Mon, 20 Nov 2017 12:36:26 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>Prawn</title><description>&lt;h6 id="bounding_box"&gt;bounding_box&lt;/h6&gt;
+
+&lt;h6 id="table"&gt;table&lt;/h6&gt;
+
+&lt;h6 id="template"&gt;Template&lt;/h6&gt;
+
+&lt;pre&gt;&lt;code&gt;repeat :all do  
+#do something
+end  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h6 id="number_pages"&gt;頁碼 number_pages&lt;/h6&gt;
+
+&lt;pre&gt;&lt;code&gt;# 頁碼的字串, 會自動帶入&amp;lt;page&amp;gt; &amp;amp; &amp;lt;total&amp;gt;
+string = "Page:  &amp;lt;page&amp;gt;  of  &amp;lt;total&amp;gt; "  
+options = {  
+  :at =&amp;gt; [bounds.right - 150, bounds.top - 55], # 出現的位置, 不確定能不能複數個
+  :width =&amp;gt; 150, # box的寬度
+  :align =&amp;gt;&lt;/code&gt;&lt;/pre&gt;</description><link>http://localhost:2368/prawn/</link><guid isPermaLink="false">f98a087a-ef08-421e-86bb-690b2b1f73e6</guid><category>Ruby on Rails</category><dc:creator>Vincent</dc:creator><pubDate>Mon, 20 Nov 2017 11:35:28 GMT</pubDate><content:encoded>&lt;h6 id="bounding_box"&gt;bounding_box&lt;/h6&gt;
+
+&lt;h6 id="table"&gt;table&lt;/h6&gt;
+
+&lt;h6 id="template"&gt;Template&lt;/h6&gt;
+
+&lt;pre&gt;&lt;code&gt;repeat :all do  
+#do something
+end  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h6 id="number_pages"&gt;頁碼 number_pages&lt;/h6&gt;
+
+&lt;pre&gt;&lt;code&gt;# 頁碼的字串, 會自動帶入&amp;lt;page&amp;gt; &amp;amp; &amp;lt;total&amp;gt;
+string = "Page:  &amp;lt;page&amp;gt;  of  &amp;lt;total&amp;gt; "  
+options = {  
+  :at =&amp;gt; [bounds.right - 150, bounds.top - 55], # 出現的位置, 不確定能不能複數個
+  :width =&amp;gt; 150, # box的寬度
+  :align =&amp;gt; :right,
+  :page_filter =&amp;gt; lambda{ |pg| pg != 1 }, # 哪幾頁不顯示
+  :start_count_at =&amp;gt; 1, # 開始的數字
+  :total_pages =&amp;gt; (page_count - 1), # page_count =&amp;gt; 總頁數,  扣掉不要的就是你要計算的頁面數, 這裡扣掉封面，所以 -1
+  :color =&amp;gt; "000000"
+}
+number_pages string, options  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h6 id=""&gt;中文字型&lt;/h6&gt;
+
+&lt;pre&gt;&lt;code&gt;# 設定字型
+font_families.update("msjh" =&amp;gt; {  
+  normal: "#{Rails.root}/public/font/msjh.ttf",
+  bold: "#{Rails.root}/public/font/msjh.ttf",
+  italic: "#{Rails.root}/public/font/msjh.ttf",
+  bold_italic: "#{Rails.root}/public/font/msjh.ttf",
+})
+# 選用字型
+font "msjh"
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;微軟正黑體TTF檔下載 &lt;a href="https://cs.fit.edu/code/projects/ndworld/repository/changes/Resources/Fonts/msjh.ttf?rev=11"&gt;https://cs.fit.edu/code/projects/ndworld/repository/changes/Resources/Fonts/msjh.ttf?rev=11&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h6 id="pdf"&gt;如何直接在瀏覽器開啟PDF檔&lt;/h6&gt;
+
+&lt;pre&gt;&lt;code&gt;send_data pdf.render, filename: 'report.pdf', type: 'application/pdf', disposition: :inline  
+# disposition: :inline 參數不會自動觸發下載
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h6 id=""&gt;參考&lt;/h6&gt;
+
+&lt;ul&gt;
+&lt;li&gt;github &lt;a href="https://github.com/prawnpdf/prawn"&gt;https://github.com/prawnpdf/prawn&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;document &lt;a href="http://prawnpdf.org/manual.pdf"&gt;http://prawnpdf.org/manual.pdf&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;document &lt;a href="http://www.rubydoc.info/github/sandal/prawn/"&gt;http://www.rubydoc.info/github/sandal/prawn/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;滿完整的範例 &lt;a href="https://www.sitepoint.com/pdf-generation-rails/"&gt;https://www.sitepoint.com/pdf-generation-rails/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Ruby China 有人分享的Slideshow &lt;a href="http://quake.wang/slides/prawn/index.html#/"&gt;http://quake.wang/slides/prawn/index.html#/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title>Rails Globalize</title><description>&lt;p&gt;migration create tables &lt;br&gt;
+in &lt;code&gt;app/models/model.rb&lt;/code&gt;  &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# 需要語言包的欄位，與migration要對應
+translates :name
+
+# 新增或編輯時補上缺少的語言，可以放在app/models/application_record.rb.rb
+def build_missing_locale_set  
+  missing_locales = I18n.available_locales - self.translations.pluck(:locale).map(&amp;amp;:to_sym)
+  missing_locales.each do |missing_locale|
+    self.translations.build(locale: missing_locale)&lt;/code&gt;&lt;/pre&gt;</description><link>http://localhost:2368/rails-globalize/</link><guid isPermaLink="false">ea282d06-cba7-4429-be48-74e28dedb464</guid><category>Ruby on Rails</category><dc:creator>Vincent</dc:creator><pubDate>Mon, 20 Nov 2017 11:34:57 GMT</pubDate><content:encoded>&lt;p&gt;migration create tables &lt;br&gt;
+in &lt;code&gt;app/models/model.rb&lt;/code&gt;  &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# 需要語言包的欄位，與migration要對應
+translates :name
+
+# 新增或編輯時補上缺少的語言，可以放在app/models/application_record.rb.rb
+def build_missing_locale_set  
+  missing_locales = I18n.available_locales - self.translations.pluck(:locale).map(&amp;amp;:to_sym)
+  missing_locales.each do |missing_locale|
+    self.translations.build(locale: missing_locale)
+  end if missing_locales.length &amp;gt; 0
+end
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;in &lt;code&gt;db/migrate/migration.rb&lt;/code&gt;  &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;  def change
+    create_table :systems do |t|
+      # 非語言包欄位
+      t.datetime :deleted_at
+
+      t.timestamps
+    end
+
+    reversible do |dir|
+      dir.up do
+        # 語言包欄位
+        System.create_translation_table! name: :string                                        
+      end
+      dir.down do
+        System.drop_translation_table!
+      end
+    end
+  end
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;add &lt;code&gt;config/routes.rb&lt;/code&gt;  &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;scope '(:locale)', locale: /..(-..)?/ do  
+  # routes
+end  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h6 id=""&gt;參考資料&lt;/h6&gt;
+
+&lt;p&gt;&lt;a href="https://github.com/globalize/globalize"&gt;https://github.com/globalize/globalize&lt;/a&gt; &lt;br&gt;
+&lt;a href="https://github.com/JuanitoFatas/Guides/blob/master/guides/edge-translation/i18n-zh_TW.md"&gt;https://github.com/JuanitoFatas/Guides/blob/master/guides/edge-translation/i18n-zh_TW.md&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title>install nvm on mac</title><description>&lt;h6 id=""&gt;參考&lt;/h6&gt;
 
 &lt;p&gt;&lt;a href="http://icarus4.logdown.com/posts/175092-nodejs-installation-guide"&gt;http://icarus4.logdown.com/posts/175092-nodejs-installation-guide&lt;/a&gt;&lt;/p&gt;
 
